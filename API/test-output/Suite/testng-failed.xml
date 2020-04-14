@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="PW" value="Mamine2010@@"/>
+  <parameter name="url" value="https://cgst-qc-bear.azurewebsites.net/"/>
+  <parameter name="username" value="zchekir@cogstate.com"/>
+  <listeners>
+    <listener class-name="Zak.ListenerTest"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="Zak.OpenBrowser">
+        <methods>
+          <include name="closeDown"/>
+          <include name="startReport"/>
+          <include name="EnterCredentials" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Zak.OpenBrowser -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

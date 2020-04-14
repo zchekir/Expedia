@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+          
+
+       <parameter name="url" value="https://cgst-qc-bear.azurewebsites.net/"/>
+       <parameter name="username" value="zchekir@cogstate.com"/>
+       <parameter name="PW" value="Mamine2010@@"/>
+       
+        <listeners>
+        <listener class-name="Zak.ListenerTest"/>
+        </listeners>
+       
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Zak.OpenBrowser">
+      
+       <methods>
+      
+      <include name="webDriver"></include>
+      <include name="clickLogin"></include >
+      <include name="EnterCredentials"></include >
+      
+      </methods>
+      
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

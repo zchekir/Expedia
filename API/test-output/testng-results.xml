@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="19686" started-at="2020-04-14T09:57:30 EDT" finished-at="2020-04-14T09:57:50 EDT">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="19686" started-at="2020-04-14T09:57:30 EDT" finished-at="2020-04-14T09:57:50 EDT">
+      <class name="Zak.OpenBrowser">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Zak.OpenBrowser@10bbd20a]" name="startReport" is-config="true" duration-ms="135" started-at="2020-04-14T09:57:30 EDT" finished-at="2020-04-14T09:57:30 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="webDriver(java.lang.String)[pri:0, instance:Zak.OpenBrowser@10bbd20a]" name="webDriver" duration-ms="8700" started-at="2020-04-14T09:57:30 EDT" finished-at="2020-04-14T09:57:39 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://cgst-qc-bear.azurewebsites.net/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webDriver -->
+        <test-method status="PASS" signature="closeDown()[pri:0, instance:Zak.OpenBrowser@10bbd20a]" name="closeDown" is-config="true" duration-ms="362" started-at="2020-04-14T09:57:39 EDT" finished-at="2020-04-14T09:57:40 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+        <test-method status="PASS" signature="clickLogin()[pri:0, instance:Zak.OpenBrowser@10bbd20a]" name="clickLogin" duration-ms="4201" started-at="2020-04-14T09:57:40 EDT" finished-at="2020-04-14T09:57:44 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickLogin -->
+        <test-method status="PASS" signature="closeDown()[pri:0, instance:Zak.OpenBrowser@10bbd20a]" name="closeDown" is-config="true" duration-ms="20" started-at="2020-04-14T09:57:44 EDT" finished-at="2020-04-14T09:57:44 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+        <test-method status="PASS" signature="EnterCredentials(java.lang.String, java.lang.String)[pri:0, instance:Zak.OpenBrowser@10bbd20a]" name="EnterCredentials" duration-ms="6173" started-at="2020-04-14T09:57:44 EDT" finished-at="2020-04-14T09:57:50 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[zchekir@cogstate.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mamine2010@@]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterCredentials -->
+        <test-method status="PASS" signature="closeDown()[pri:0, instance:Zak.OpenBrowser@10bbd20a]" name="closeDown" is-config="true" duration-ms="48" started-at="2020-04-14T09:57:50 EDT" finished-at="2020-04-14T09:57:50 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+      </class> <!-- Zak.OpenBrowser -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
