@@ -8,6 +8,7 @@ public class TC_CreatingAccount extends Helper {
 	@Test
 	public void setUp() throws Exception {
 		OpenBrowser();
+		driver.quit();
 	}
 
 }
