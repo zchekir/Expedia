@@ -3,22 +3,19 @@ package com.expedia.PageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import java.util.concurrent.TimeUnit;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Helper {
 
-	
-	static WebDriver driver = new ChromeDriver();
-	
+	static WebDriver driver;
 	
 	public void OpenBrowser() throws Exception {
 		
-		String url ="Expedia.com";
+		String url ="https://www.expedia.com/";
 		
-		// Additional code to help chromewebdriver:
-		
-		WebDriver driver = null;
-		//WebDriverManager.chromedriver().version("77.0.3865.40").setup();
-		//ChromeDriverManager.getInstance().setup();
+		// configuring chromedriver
+		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized"); 
 		options.addArguments("enable-automation"); 
@@ -28,10 +25,9 @@ public class Helper {
 		options.addArguments("--disable-browser-side-navigation"); 
 		options.addArguments("--disable-gpu"); 
 		driver = new ChromeDriver(options); 
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
 		driver.get(url); 
-		
-		
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\zchekir\\Desktop\\chromedriver.exe");
-		driver.get(url);
-}
+	}
+	
 }
