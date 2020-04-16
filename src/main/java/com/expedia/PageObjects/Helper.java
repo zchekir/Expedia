@@ -4,9 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
-
-import com.google.inject.spi.Message;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -24,12 +21,12 @@ public class Helper {
 		
 		
 		Properties pro = new Properties();
-		FileInputStream file = new FileInputStream("C:\\Users\\zchekir\\eclipse-workspace\\Expedia-1\\src\\main\\java\\com\\expedia\\PageObjects\\Data.properties");
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/data.properties");
 		pro.load(file);
 		
 		// configuring drivers
 		if (pro.getProperty("browser").equals("chrome")){
+			
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized"); 
