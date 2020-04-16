@@ -3,6 +3,7 @@ package com.expedia.PageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,6 +18,8 @@ public class Helper {
 	public static WebDriver driver;
 	
 	public void OpenBrowser() throws Exception {
+		
+		/*
 		// To read from data.properties file
 		File file = new File(System.getProperty("user.dir") + "/data.properties");
 		  
@@ -36,6 +39,22 @@ public class Helper {
 		}
 		
 		String URL = prop.getProperty("URL");
+		*/
+		
+		Properties pro = new Properties();
+		FileInputStream file = new FileInputStream("C:\\Users\\zchekir\\eclipse-workspace\\Expedia-1\\src\\main\\java\\com\\expedia\\PageObjects\\Data.properties");
+		pro.load(file);
+		
+		if (pro.getProperty("browser").equals("chrome")){
+			
+			driver = new ChromeDriver();
+		}
+		else if (pro.getProperty("browser").equals("firefox")){
+			
+			driver = new FirefoxDriver();
+		}
+		driver.get(pro.getProperty("url"));
+		
 		
 		// configuring chrome driver
 		WebDriverManager.chromedriver().setup();
@@ -48,15 +67,21 @@ public class Helper {
 		options.addArguments("--disable-browser-side-navigation"); 
 		options.addArguments("--disable-gpu"); 
 		driver = new ChromeDriver(options); 
-		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		driver.get(URL); 
 		
+		
+		/*
 		System.out.println("Connecting to:: " + URL);
 		System.out.println("User name:: " + prop.getProperty("username"));
 	    System.out.println("Password:: " + prop.getProperty("password"));
+	    */
 		
+		
+	}
+
+	private void Testdata() {
+		// TODO Auto-generated method stub
 		
 	} // closes OpenBrowser 
 	
