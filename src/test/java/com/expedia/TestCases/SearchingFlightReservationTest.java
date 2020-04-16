@@ -7,7 +7,7 @@ public class SearchingFlightReservationTest {
 	@Test
 	public void SearchingFlightReservationt() {
 		
-		System.out.println("Booking flight pass");
+		System.out.println("ZAK");
 	}
 
 }

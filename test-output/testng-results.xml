@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11225" started-at="2020-04-16T14:17:28 EDT" finished-at="2020-04-16T14:17:39 EDT">
+  <suite name="Default suite" duration-ms="11896" started-at="2020-04-16T14:41:18 EDT" finished-at="2020-04-16T14:41:30 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11225" started-at="2020-04-16T14:17:28 EDT" finished-at="2020-04-16T14:17:39 EDT">
-      <class name="com.expedia.TestCases.TC_CreatingAccount">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.expedia.TestCases.TC_CreatingAccount@131276c2]" name="launchBrowser" duration-ms="11188" started-at="2020-04-16T14:17:28 EDT" finished-at="2020-04-16T14:17:39 EDT">
+    <test name="Default test" duration-ms="11896" started-at="2020-04-16T14:41:18 EDT" finished-at="2020-04-16T14:41:30 EDT">
+      <class name="com.expedia.TestCases.CreatingAccountTest">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@131276c2]" name="launchBrowser" duration-ms="11860" started-at="2020-04-16T14:41:18 EDT" finished-at="2020-04-16T14:41:30 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-      </class> <!-- com.expedia.TestCases.TC_CreatingAccount -->
+      </class> <!-- com.expedia.TestCases.CreatingAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
