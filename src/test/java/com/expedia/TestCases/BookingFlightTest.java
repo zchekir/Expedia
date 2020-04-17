@@ -9,6 +9,7 @@ public class BookingFlightTest {
 	public void BookingFlight() {
 		
 		System.out.println("Booking flight pass");
+		System.out.println("Jenkins working as expected");
 	}
 
 }
