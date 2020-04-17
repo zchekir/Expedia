@@ -18,8 +18,6 @@ public class Helper {
 	
 	public void OpenBrowser() throws Exception {
 		
-		
-		
 		Properties pro = new Properties();
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/data.properties");
 		pro.load(file);
@@ -47,10 +45,6 @@ public class Helper {
 		driver.get(pro.getProperty("url"));
 		System.out.println(driver.getTitle());
 		
-	
-		
 	}
-
-	
 	
 }
