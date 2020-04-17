@@ -9,55 +9,24 @@
   <url>http://maven.apache.org</url>
   
   <profiles>
-  <profile>
-  <id>Regression </id>
+    <profile>
+  	  <id>Regression</id>
+    </profile>
   
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M4</version>
-          <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng2.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-  
- 
-  
-  </profile>
-  
-  <profile>
-   <id>Smoke </id>
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M4</version>
-          <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-  
-  
-  </profile>
-  
+    <profile>
+  	  <id>Smoke</id>
+  	</profile>
   </profiles>
-    <!--  To help us to run all test cases -->
+  
   <build>
+  <!-- For pom to know about log4j properties file -->
+  	<resources>
+  	  <resource>
+	    <directory>src/main/java/resources</directory>
+  	  </resource>
+  	</resources>
+  	
+	<!--  To help us to run all test cases -->
     <pluginManagement>
       <plugins>
         <plugin>
@@ -65,10 +34,10 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M4</version>
           <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -76,46 +45,97 @@
   
   
   <dependencies>
-  
-  <!--  selenium -->
+  	<!--  selenium -->
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-     <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
+	<dependency>
+	  <groupId>org.seleniumhq.selenium</groupId>
+	  <artifactId>selenium-java</artifactId>
+	  <version>3.141.59</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.1.0</version>
-    <scope>test</scope>
+	  <groupId>org.testng</groupId>
+	  <artifactId>testng</artifactId>
+	  <version>7.1.0</version>
+	  <scope>test</scope>
    </dependency>
-
+   
+	<!-- to get webdrivers from maven rather than local machine -->
      <dependency>
-     <groupId>io.github.bonigarcia</groupId>
-     <artifactId>webdrivermanager</artifactId>
-     <version>3.8.1</version>
+	   <groupId>io.github.bonigarcia</groupId>
+	   <artifactId>webdrivermanager</artifactId>
+	   <version>3.8.1</version>
      </dependency>        
-            
-            <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-     <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-chrome-driver</artifactId>
-    <version>3.141.59</version>
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+    <dependency>
+	  <groupId>org.seleniumhq.selenium</groupId>
+	  <artifactId>selenium-chrome-driver</artifactId>
+	  <version>3.141.59</version>
     </dependency>
-    
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
 	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-firefox-driver</artifactId>
-	    <version>3.141.59</version>
+	  <groupId>org.seleniumhq.selenium</groupId>
+	  <artifactId>selenium-firefox-driver</artifactId>
+	  <version>3.141.59</version>
 	</dependency>
-    
-
-       
-
+	
+	<!-- To fix console errors -->
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+	  <groupId>org.slf4j</groupId>
+	  <artifactId>slf4j-api</artifactId>
+	  <version>1.7.30</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+	<dependency>
+	  <groupId>org.slf4j</groupId>
+	  <artifactId>slf4j-log4j12</artifactId>
+	  <version>1.7.30</version>
+	  <scope>test</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+	<dependency>
+	  <groupId>log4j</groupId>
+	  <artifactId>log4j</artifactId>
+	  <version>1.2.17</version>
+	</dependency>
+	
+	<!-- http://extentreports.com/docs/versions/4/java/ -->
+	<dependency>
+	  <groupId>com.aventstack</groupId>
+	  <artifactId>extentreports</artifactId>
+	  <version>4.1.3</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+	<dependency>
+	  <groupId>org.freemarker</groupId>
+	  <artifactId>freemarker</artifactId>
+	  <version>2.3.30</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+	<dependency>
+	  <groupId>org.apache.httpcomponents</groupId>
+	  <artifactId>httpclient</artifactId>
+	  <version>4.5.12</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency>
+	  <groupId>com.google.code.gson</groupId>
+	  <artifactId>gson</artifactId>
+	  <version>2.8.6</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver -->
+	<dependency>
+	  <groupId>org.mongodb</groupId>
+	  <artifactId>mongodb-driver</artifactId>
+	  <version>3.12.3</version>
+	</dependency>
 
   </dependencies>
 </project>

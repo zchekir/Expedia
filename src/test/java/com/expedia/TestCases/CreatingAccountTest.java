@@ -11,7 +11,6 @@ public class CreatingAccountTest extends Helper {
 		OpenBrowser();
 		driver.quit();
 		
-		
 	}
 
 }
