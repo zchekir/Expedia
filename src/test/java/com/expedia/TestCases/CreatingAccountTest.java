@@ -1,15 +1,25 @@
 package com.expedia.TestCases;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import com.expedia.PageObjects.Helper;
 
-public class CreatingAccountTest extends Helper {
+public class CreatingAccountTest {
+	// The name of this Logger will be "org.apache.logging.Parent"
+	private static final Logger log = LogManager.getLogger(CreatingAccountTest.class);
+	
 	
 	@Test
 	public void launchBrowser() throws Exception {
-		OpenBrowser();
-		driver.quit();
+		Helper.OpenBrowser();
+		log.debug("testing debug log");
+		log.error("testing error log");
+		log.info("testing info log");
+		log.warn("testing warning log");
+		Helper.driver.quit();
+		log.info("Closing down all browsers");
 		
 	}
 

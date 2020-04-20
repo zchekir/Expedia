@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -14,36 +15,30 @@ public class Helper {
 
 	public static WebDriver driver;
 	
-	
-	
-	public void OpenBrowser() throws Exception {
-		
-		Properties pro = new Properties();
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/data.properties");
-		pro.load(file);
+	public static void OpenBrowser() throws Exception {
+		Properties prop = new Properties();
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/resources/data.properties");
+		prop.load(file);
 		
 		// configuring drivers
-		if (pro.getProperty("browser").equals("chrome")){
-			
+		if (prop.getProperty("browser").equals("chrome")){
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("start-maximized"); 
-			options.addArguments("enable-automation"); 
-			options.addArguments("--no-sandbox"); 
-			options.addArguments("--disable-infobars");
-			options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--disable-browser-side-navigation"); 
-			options.addArguments("--disable-gpu");  
+			options.setHeadless(true);
+			options.addArguments("--disable-gpu", "--start-maximized","--ignore-certificate-errors", "--no-sandbox"); 
+			options.addArguments("--enable-automation", "--disable-notifications", "--disable-browser-side-navigation"); 
 			driver = new ChromeDriver(options);
-		} else if (pro.getProperty("browser").equals("firefox")) {
+		} else if (prop.getProperty("browser").equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			FirefoxOptions ffOptions = new FirefoxOptions();
+			ffOptions.setHeadless(true);
+			driver = new FirefoxDriver(ffOptions);
 		}
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		driver.get(pro.getProperty("url"));
-		System.out.println(driver.getTitle());
+		driver.get(prop.getProperty("url"));
+		//System.out.println(driver.getTitle());
 		
 	}
 	

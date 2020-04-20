@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Can change status to these levels: trace, debug, info, warn or error -->
+<Configuration status="info">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <RollingRandomAccessFile name="LogToRollingFile" fileName="logs/app.log"
+                    filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="2 MB"/>
+			</Policies>
+			<DefaultRolloverStrategy max="10"/>
+		</RollingRandomAccessFile>
+		
+		<!-- send email when error occurs 
+		<SMTP name="LogToMail" subject="Error Log From Log4j"
+              from="zeinkaps123@yahoo.com"
+              to="zeinkap@gmail.com"
+              smtpHost="smtp.mailgun.org"
+              smtpPort="25"
+              smtpUsername="abc"
+              smtpPassword="123"
+              bufferSize="100">
+        </SMTP>
+		-->
+		<Async name="Async">
+			<!-- reference to other appenders -->
+            <AppenderRef ref="LogToRollingRandomAccessFile"/>
+        </Async>
+        
+    </Appenders>
+    <Loggers>
+    	<!-- avoid duplicated logs with additivity=false -->
+        <Logger name="com.expedia" level="info" additivity="false">
+        	<AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="error">
+        	<AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
