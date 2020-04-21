@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5825" started-at="2020-04-20T18:08:37 EDT" finished-at="2020-04-20T18:08:43 EDT">
+  <suite name="Default suite" duration-ms="11687" started-at="2020-04-21T17:40:28 EDT" finished-at="2020-04-21T17:40:40 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5825" started-at="2020-04-20T18:08:37 EDT" finished-at="2020-04-20T18:08:43 EDT">
-      <class name="com.expedia.TestCases.CreatingAccountTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3c0be339]" name="launchBrowser" duration-ms="5787" started-at="2020-04-20T18:08:37 EDT" finished-at="2020-04-20T18:08:43 EDT">
+    <test name="Default test" duration-ms="11687" started-at="2020-04-21T17:40:28 EDT" finished-at="2020-04-21T17:40:40 EDT">
+      <class name="com.expedia.TestCases.DataTest">
+        <test-method status="PASS" signature="ExcelData()[pri:0, instance:com.expedia.TestCases.DataTest@467aecef]" name="ExcelData" duration-ms="11639" started-at="2020-04-21T17:40:28 EDT" finished-at="2020-04-21T17:40:40 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-      </class> <!-- com.expedia.TestCases.CreatingAccountTest -->
+        </test-method> <!-- ExcelData -->
+      </class> <!-- com.expedia.TestCases.DataTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

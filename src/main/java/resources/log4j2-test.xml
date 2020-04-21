@@ -23,7 +23,7 @@
               to="zeinkap@gmail.com"
               smtpHost="smtp.mailgun.org"
               smtpPort="25"
-              smtpUsername="abc"
+              smtpUsername="zeinkaps123@yahoo.com"
               smtpPassword="123"
               bufferSize="100">
         </SMTP>
