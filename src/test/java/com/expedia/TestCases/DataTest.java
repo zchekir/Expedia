@@ -13,10 +13,10 @@ import com.expedia.PageObjects.Helper;
 
 public class DataTest extends Helper {
 	
-	DataFormatter dataFormatter = new DataFormatter();
+	static DataFormatter dataFormatter = new DataFormatter();
 
 	@Test
-	public void ExcelData() throws Exception {
+	public static void ReadExcelData() throws Exception {
 		
 		OpenBrowser();
 		FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/resources/TestData.xlsx");
@@ -42,6 +42,11 @@ public class DataTest extends Helper {
 	        // Import second row, third cell data
 	        
 		}
+		
+	}
+	
+	@Test
+	public void WriteExcelData() {
 		
 	}
 

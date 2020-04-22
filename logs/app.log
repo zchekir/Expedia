@@ -1,5 +1,6 @@
-2020-04-20 18:08:43,039 DEBUG c.e.T.CreatingAccountTest [main] testing debug log
-2020-04-20 18:08:43,039 ERROR c.e.T.CreatingAccountTest [main] testing error log
-2020-04-20 18:08:43,039 INFO c.e.T.CreatingAccountTest [main] testing info log
-2020-04-20 18:08:43,040 WARN c.e.T.CreatingAccountTest [main] testing warning log
-2020-04-20 18:08:43,595 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-22 18:14:21,207 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-22 18:14:21,387 WARN c.e.T.CreatingAccountTest [main] testing warn out
+2020-04-22 18:14:21,387 ERROR c.e.T.CreatingAccountTest [main] testing error out
+2020-04-22 18:14:21,388 FATAL c.e.T.CreatingAccountTest [main] testing fatal out
+2020-04-22 18:14:21,388 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-22 18:14:22,739 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers

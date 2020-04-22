@@ -3,11 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.expedia.TestCases.DataTest">
+      <class name="com.expedia.TestCases.CreatingAccountTest">
         <methods>
-          <include name="ExcelData"/>
+          <include name="ExpediaTitleValidation"/>
+          <include name="browserSetup"/>
+          <include name="endReport"/>
+          <include name="extentReportSetup"/>
+          <include name="getResult"/>
         </methods>
-      </class> <!-- com.expedia.TestCases.DataTest -->
+      </class> <!-- com.expedia.TestCases.CreatingAccountTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

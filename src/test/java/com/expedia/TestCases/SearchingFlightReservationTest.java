@@ -2,12 +2,13 @@ package com.expedia.TestCases;
 
 import org.testng.annotations.Test;
 
-public class SearchingFlightReservationTest {
+import com.expedia.PageObjects.Helper;
+
+public class SearchingFlightReservationTest extends Helper {
 	
 	@Test
-	public void SearchingFlightReservationt() {
-		
-		System.out.println("ZAK");
+	public void SearchingFlightReservation() throws Exception {
+		DataTest.ReadExcelData();
 	}
 
 }

@@ -2,16 +2,39 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11687" started-at="2020-04-21T17:40:28 EDT" finished-at="2020-04-21T17:40:40 EDT">
+  <suite name="Default suite" duration-ms="13640" started-at="2020-04-22T18:14:09 EDT" finished-at="2020-04-22T18:14:23 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11687" started-at="2020-04-21T17:40:28 EDT" finished-at="2020-04-21T17:40:40 EDT">
-      <class name="com.expedia.TestCases.DataTest">
-        <test-method status="PASS" signature="ExcelData()[pri:0, instance:com.expedia.TestCases.DataTest@467aecef]" name="ExcelData" duration-ms="11639" started-at="2020-04-21T17:40:28 EDT" finished-at="2020-04-21T17:40:40 EDT">
+    <test name="Default test" duration-ms="13640" started-at="2020-04-22T18:14:09 EDT" finished-at="2020-04-22T18:14:23 EDT">
+      <class name="com.expedia.TestCases.CreatingAccountTest">
+        <test-method status="PASS" signature="extentReportSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@4cc8eb05]" name="extentReportSetup" is-config="true" duration-ms="121" started-at="2020-04-22T18:14:09 EDT" finished-at="2020-04-22T18:14:09 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ExcelData -->
-      </class> <!-- com.expedia.TestCases.DataTest -->
+        </test-method> <!-- extentReportSetup -->
+        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@4cc8eb05]" name="browserSetup" is-config="true" duration-ms="11679" started-at="2020-04-22T18:14:09 EDT" finished-at="2020-04-22T18:14:21 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="ExpediaTitleValidation()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@4cc8eb05]" name="ExpediaTitleValidation" duration-ms="177" started-at="2020-04-22T18:14:21 EDT" finished-at="2020-04-22T18:14:21 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExpediaTitleValidation -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@4cc8eb05]" name="getResult" is-config="true" duration-ms="1347" started-at="2020-04-22T18:14:21 EDT" finished-at="2020-04-22T18:14:22 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ExpediaTitleValidation status=SUCCESS method=CreatingAccountTest.ExpediaTitleValidation()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@4cc8eb05] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@4cc8eb05]" name="endReport" is-config="true" duration-ms="288" started-at="2020-04-22T18:14:22 EDT" finished-at="2020-04-22T18:14:23 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.expedia.TestCases.CreatingAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
