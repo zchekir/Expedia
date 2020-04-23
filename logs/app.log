@@ -1,6 +1,24 @@
-2020-04-22 18:14:21,207 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
-2020-04-22 18:14:21,387 WARN c.e.T.CreatingAccountTest [main] testing warn out
-2020-04-22 18:14:21,387 ERROR c.e.T.CreatingAccountTest [main] testing error out
-2020-04-22 18:14:21,388 FATAL c.e.T.CreatingAccountTest [main] testing fatal out
-2020-04-22 18:14:21,388 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
-2020-04-22 18:14:22,739 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 17:04:11,422 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 17:04:12,568 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 17:04:13,968 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 17:17:53,017 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 17:17:55,410 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 17:17:56,646 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 17:44:11,709 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 17:44:11,745 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 17:44:13,262 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 17:55:42,292 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 17:55:42,363 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 17:55:43,678 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 18:02:54,824 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 18:02:56,602 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 18:02:57,553 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 18:05:15,329 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 18:05:16,878 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 18:05:17,660 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 18:08:23,671 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 18:08:24,632 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 18:08:25,467 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-04-23 18:18:36,688 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-04-23 18:18:37,513 INFO c.e.T.CreatingAccountTest [main] Asserted expedia title
+2020-04-23 18:18:38,788 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers

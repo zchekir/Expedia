@@ -19,7 +19,7 @@ public class DataTest extends Helper {
 	public static void ReadExcelData() throws Exception {
 		
 		OpenBrowser();
-		FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/resources/TestData.xlsx");
+		FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/TestData.xlsx");
 	
 		workbook = new XSSFWorkbook(ExcelFile);
 		sheet = workbook.getSheetAt(0);

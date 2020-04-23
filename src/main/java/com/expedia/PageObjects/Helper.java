@@ -16,7 +16,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -45,15 +44,14 @@ public class Helper {
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	
+	public static void loadDataPropFile() throws Exception {
+		// load data.properties file
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/data.properties");
+		prop.load(file);
+	}
 	
 	public static void OpenBrowser() throws Exception {
-		
-		// load the file
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/resources/data.properties");
-		prop.load(file);
-		
-		
-		
+		loadDataPropFile();
 		// configuring drivers
 		if (prop.getProperty("browser").equals("chrome")){
 			WebDriverManager.chromedriver().setup();
@@ -81,7 +79,7 @@ public class Helper {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 	  
-		// after execution, you could see a folder "FailedTestsScreenshots" under src folder
+		// storing screenshots in folder
 		String destination = System.getProperty("user.dir") + "/Screenshots/" + screenshotName + dateName + ".png";
 		File finalDestination = new File(destination);
 		FileUtils.copyFile(source, finalDestination);

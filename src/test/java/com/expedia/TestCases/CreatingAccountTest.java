@@ -1,5 +1,6 @@
 package com.expedia.TestCases;
 
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
@@ -15,28 +16,30 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.expedia.PageObjects.Helper;
 
+@SuppressWarnings("deprecation")
 public class CreatingAccountTest extends Helper {
 	// creating log object for logging messages to console/main.log file
 	private static final Logger logger = LogManager.getLogger(CreatingAccountTest.class);
 	
-	@SuppressWarnings("deprecation")
 	@BeforeTest
-	public void extentReportSetup() {
+	public void extentReportSetup() throws Exception {
+		loadDataPropFile();
 		// configuration for extent report
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/extentReport.html");
-		htmlReporter.config().setReportName("Report for CreatingAccountTest");
-		htmlReporter.config().setDocumentTitle("Expedia Automation Report");
-		htmlReporter.config().setTheme(Theme.DARK);
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/extent-report.html");
+		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/src/main/resources/htmlreporter-config.xml");
+//		htmlReporter.config().setReportName("Report for CreatingAccountTest");
+//		htmlReporter.config().setDocumentTitle("Expedia Automation Report");
+//		htmlReporter.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
-		
 		// general information related to application
-		extent.setSystemInfo("Application", "Expedia Test");
-		extent.setSystemInfo("Environment", "Production");
-		extent.setSystemInfo("User", "ztestuser");
+		extent.setSystemInfo("Application", prop.getProperty("application"));
+		extent.setSystemInfo("Environment", prop.getProperty("environment"));
+		extent.setSystemInfo("OS", prop.getProperty("os"));
+		extent.setSystemInfo("User", prop.getProperty("username"));
+		extent.setSystemInfo("Browser", prop.getProperty("browser"));
 	}
 	
 	@AfterTest 

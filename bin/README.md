@@ -1,2 +1,0 @@
-# Expedia
-Automation Project

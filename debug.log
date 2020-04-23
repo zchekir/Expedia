@@ -4,3 +4,4 @@
 [0422/180147.796:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
 [0422/180710.860:ERROR:file_io_win.cc(161)] CreateFile C:\Users\zkapadia\AppData\Local\Temp\scoped_dir4072_957114734\Crashpad\settings.dat: The system cannot find the file specified. (0x2)
 [0422/181421.739:ERROR:file_io_win.cc(161)] CreateFile C:\Users\zkapadia\AppData\Local\Temp\scoped_dir25736_1538939139\Crashpad\settings.dat: The system cannot find the file specified. (0x2)
+[0423/181837.827:ERROR:file_io_win.cc(161)] CreateFile C:\Users\zkapadia\AppData\Local\Temp\scoped_dir15548_1268971557\Crashpad\settings.dat: The system cannot find the file specified. (0x2)
