@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -57,13 +58,17 @@ public class Helper {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(false);
-			options.addArguments("--disable-gpu", "--start-maximized","--ignore-certificate-errors", "--no-sandbox"); 
-			options.addArguments("--enable-automation", "--disable-notifications", "--disable-browser-side-navigation"); 
+			options.setAcceptInsecureCerts(true);
+			options.addArguments("start-maximized", "disable-extensions");
+			// to hide "Chrome is being controlled by automated" infobar message
+			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+			options.setExperimentalOption("useAutomationExtension", false);
 			driver = new ChromeDriver(options);
 		} else if (prop.getProperty("browser").equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions ffOptions = new FirefoxOptions();
 			ffOptions.setHeadless(true);
+			ffOptions.setAcceptInsecureCerts(true);
 			driver = new FirefoxDriver(ffOptions);
 		}
 		
@@ -73,13 +78,13 @@ public class Helper {
 		
 	}
 	
-	// taking screenshots
+	// to take screenshots
 	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 	  
-		// storing screenshots in folder
+		// store screenshot in local project directory
 		String destination = System.getProperty("user.dir") + "/Screenshots/" + screenshotName + dateName + ".png";
 		File finalDestination = new File(destination);
 		FileUtils.copyFile(source, finalDestination);

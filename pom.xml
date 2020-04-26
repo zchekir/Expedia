@@ -71,11 +71,11 @@
   
   
   <dependencies>
-    <!-- selenium jars -->
+    <!-- selenium version 4 -->
 	<dependency>
 	  <groupId>org.seleniumhq.selenium</groupId>
 	  <artifactId>selenium-java</artifactId>
-	  <version>3.141.59</version>
+	  <version>4.0.0-alpha-5</version>
     </dependency>
 
     <!-- to use testng -->
@@ -83,6 +83,7 @@
 	  <groupId>org.testng</groupId>
 	  <artifactId>testng</artifactId>
 	  <version>7.1.0</version>
+	  <scope>test</scope>
    </dependency>
    
 	<!-- to get webdrivers -->
@@ -91,18 +92,6 @@
 	   <artifactId>webdrivermanager</artifactId>
 	   <version>3.8.1</version>
      </dependency>        
-	<!-- to get selenium-chrome-driver -->
-    <dependency>
-	  <groupId>org.seleniumhq.selenium</groupId>
-	  <artifactId>selenium-chrome-driver</artifactId>
-	  <version>3.141.59</version>
-    </dependency>
-    <!-- to get selenium-firefox-driver -->
-	<dependency>
-	  <groupId>org.seleniumhq.selenium</groupId>
-	  <artifactId>selenium-firefox-driver</artifactId>
-	  <version>3.141.59</version>
-	</dependency>
 	
 	<!-- to use log4j -->
 	<dependency>

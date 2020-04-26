@@ -1,8 +1,15 @@
 package com.expedia.TestCases;
 
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -29,9 +36,6 @@ public class CreatingAccountTest extends Helper {
 		// configuration for extent report
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/extent-report.html");
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/src/main/resources/htmlreporter-config.xml");
-//		htmlReporter.config().setReportName("Report for CreatingAccountTest");
-//		htmlReporter.config().setDocumentTitle("Expedia Automation Report");
-//		htmlReporter.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		// general information related to application
@@ -60,14 +64,24 @@ public class CreatingAccountTest extends Helper {
 		logger.info("Asserted expedia title");
 	}
 	
+	@Test
+	public void ValidateLogo() throws IOException {
+		WebElement headerLogo = driver.findElement(By.xpath("//a[@id='header-logo']//img"));
+		// get screenshot of element and store as a file
+		File file = headerLogo.getScreenshotAs(OutputType.FILE);
+		// store file in our local machine
+		File destFile = new File(System.getProperty("user.dir") + "/Screenshots/header-logo.png");
+		FileUtils.copyFile(file, destFile);
+	}
+	
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			// to add name in extent report and style with markuphelper
+			// add testcase name to extent report and style with markuphelper
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - TEST CASE FAILED", ExtentColor.RED));
-			// to add error/exception
+			// add error/exception to report
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - TEST CASE FAILED", ExtentColor.RED));
-			// to capture screenshot path and store it in string 
+			// take screenshot using function defined in helper class
 			String screenshotPath = getScreenshot(driver, result.getName());
 			// fail test and add screenshot to extent report
 			test.fail("Test Case Failed Snapshot is below " + test.addScreenCaptureFromPath(screenshotPath));
