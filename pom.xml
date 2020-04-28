@@ -6,6 +6,7 @@
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Expedia</name>
+  <description>This is expedia.com with full-scale automation testing framework</description>
   <url>http://maven.apache.org</url>
   
   <properties>
