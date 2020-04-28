@@ -1,3 +1,5 @@
 /target/
 /bin/
-
+/test-output/junitreports
+/test-output/Default_suite
+/test-output/old

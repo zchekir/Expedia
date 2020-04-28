@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="17048" started-at="2020-04-28T18:11:17 EDT" finished-at="2020-04-28T18:11:34 EDT">
     <groups>
     </groups>
@@ -12,6 +13,18 @@
           </reporter-output>
         </test-method> <!-- Signin -->
       </class> <!-- com.expedia.TestCases.SignInTest -->
+=======
+  <suite name="Default suite" duration-ms="15285" started-at="2020-04-28T16:35:20 EDT" finished-at="2020-04-28T16:35:35 EDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15285" started-at="2020-04-28T16:35:20 EDT" finished-at="2020-04-28T16:35:35 EDT">
+      <class name="com.expedia.TestCases.DataTest">
+        <test-method status="PASS" signature="ReadExcelData()[pri:0, instance:com.expedia.TestCases.DataTest@543c6f6d]" name="ReadExcelData" duration-ms="15247" started-at="2020-04-28T16:35:20 EDT" finished-at="2020-04-28T16:35:35 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReadExcelData -->
+      </class> <!-- com.expedia.TestCases.DataTest -->
+>>>>>>> f1c3af12d8dbb227997cc587780f8b9ca2c19643
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
