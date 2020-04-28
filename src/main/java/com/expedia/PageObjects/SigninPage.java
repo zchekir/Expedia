@@ -1,5 +1,5 @@
 package com.expedia.PageObjects;
 
-public class SignUpPage {
+public class SigninPage {
 
 }

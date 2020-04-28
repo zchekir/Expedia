@@ -90,6 +90,7 @@ public class CreatingAccountTest extends Helper {
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
 		}
+		
 		driver.quit();
 		logger.info("Closing down all browsers");
 	}

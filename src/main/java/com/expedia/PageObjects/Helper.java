@@ -59,7 +59,7 @@ public class Helper {
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(false);
 			options.setAcceptInsecureCerts(true);
-			options.addArguments("start-maximized", "disable-extensions");
+			options.addArguments("start-maximized", "disable-extensions", "disable-popup-blocking");
 			// to hide "Chrome is being controlled by automated" infobar message
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
