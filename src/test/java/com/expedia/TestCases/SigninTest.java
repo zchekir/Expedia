@@ -16,6 +16,6 @@ public class SigninTest extends Helper{
 		PageFactory.initElements(driver, homePage);
 		homePage.login(prop.getProperty("email"), prop.getProperty("password"));
 		
-		// how to deal with picture captcha?
+		// how to deal with security captcha?
 	}
 }

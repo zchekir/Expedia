@@ -5,19 +5,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage {
 	
-	@FindBy(xpath="//button[@id='header-account-menu']") 
+	@FindBy(id="header-account-menu") 
 	private WebElement accountMenu;
 	
-	@FindBy(xpath="//a[@id='account-signin']") 
+	@FindBy(id="account-signin") 
 	private WebElement signInLink;
 	
-	@FindBy(xpath="//input[@id='gss-signin-email']") 
+	@FindBy(id="gss-signin-email") 
 	private WebElement emailTextBox;
 	
-	@FindBy(xpath="//input[@id='gss-signin-password']") 
+	@FindBy(id="gss-signin-password") 
 	private WebElement passwordTextBox;
 	
-	@FindBy(xpath="//button[@id='gss-signin-submit']") 
+	@FindBy(id="gss-signin-submit") 
 	private WebElement signInBtn;
 	
 	

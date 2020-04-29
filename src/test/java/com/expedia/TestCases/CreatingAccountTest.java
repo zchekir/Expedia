@@ -34,8 +34,8 @@ public class CreatingAccountTest extends Helper {
 	public void extentReportSetup() throws Exception {
 		loadDataPropFile();
 		// configuration for extent report
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/extent-report.html");
-		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/src/main/resources/htmlreporter-config.xml");
+		htmlReporter = new ExtentHtmlReporter(htmlReportPath);
+		htmlReporter.loadXMLConfig(htmlReporterConfigPath);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		// general information related to application
@@ -61,7 +61,7 @@ public class CreatingAccountTest extends Helper {
 	public void ExpediaTitleValidation() {
 		test = extent.createTest("Validate Expedia title");
 		Assert.assertEquals(driver.getTitle(), "Expedia Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations");
-		logger.info("Asserted expedia title");
+		logger.info("Validated expedia title");
 	}
 	
 	@Test

@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -31,7 +33,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Helper {
 
 	public static WebDriver driver;
-	
 	public static Properties prop = new Properties();
 	
 	// excel sheet classes
@@ -44,6 +45,11 @@ public class Helper {
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
 	public static ExtentTest test;
+	// path for where report is to be saved
+	protected String htmlReportPath = System.getProperty("user.dir") + "/test-output/extent-report.html";
+	// path for html report config
+	protected String htmlReporterConfigPath = System.getProperty("user.dir") + "/src/main/resources/htmlreporter-config.xml";
+	
 	
 	public static void loadDataPropFile() throws Exception {
 		// load data.properties file
@@ -54,28 +60,39 @@ public class Helper {
 	public static void OpenBrowser() throws Exception {
 		loadDataPropFile();
 		// configuring drivers
-		if (prop.getProperty("browser").equals("chrome")){
+		if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(false);
 			options.setAcceptInsecureCerts(true);
-			options.addArguments("start-maximized", "disable-extensions", "disable-popup-blocking");
+			options.addArguments("disable-extensions", "disable-popup-blocking");
 			// to hide "Chrome is being controlled by automated" infobar message
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
 			driver = new ChromeDriver(options);
-		} else if (prop.getProperty("browser").equals("firefox")) {
+		} 
+		else if (prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions ffOptions = new FirefoxOptions();
-			ffOptions.setHeadless(true);
+			ffOptions.setHeadless(false);
 			ffOptions.setAcceptInsecureCerts(true);
 			driver = new FirefoxDriver(ffOptions);
-		}
+		} 
+		else if(prop.getProperty("browser").equalsIgnoreCase("ie")) {
+			WebDriverManager.iedriver().setup();
+			InternetExplorerOptions ieOptions = new InternetExplorerOptions();
+			ieOptions.ignoreZoomSettings();
+			ieOptions.introduceFlakinessByIgnoringSecurityDomains();
+
+			driver = new InternetExplorerDriver(ieOptions);
+		} 
+		else System.out.println("Please enter a valid browser");
 		
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
-		
+
 	}
 	
 	// to take screenshots

@@ -3,19 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.expedia.TestCases.SignInTest">
+      <class name="com.expedia.TestCases.SigninTest">
         <methods>
-          <include name="ExcelData"/>
+          <include name="Signin"/>
         </methods>
-      </class> <!-- com.expedia.TestCases.SignInTest -->
-=======
-      <class name="com.expedia.TestCases.DataTest">
-        <methods>
-          <include name="ReadExcelData"/>
-        </methods>
-      </class> <!-- com.expedia.TestCases.DataTest -->
->>>>>>> f1c3af12d8dbb227997cc587780f8b9ca2c19643
+      </class> <!-- com.expedia.TestCases.SigninTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
