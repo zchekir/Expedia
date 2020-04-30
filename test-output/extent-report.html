@@ -57,7 +57,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Apr 26, 2020 01:25:34</span>
+			<span class='label blue darken-3 suite-start-time'>Apr 30, 2020 14:33:58</span>
 			</a>
 		</ul>
 	</div>
@@ -72,7 +72,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -115,10 +115,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -136,17 +136,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Validate Expedia title</span>
-						<span class='test-time'>Apr 26, 2020 01:25:46</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Apr 30, 2020 14:34:44</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 26, 2020 01:25:46</span>
-	<span class='label end-time'>Apr 26, 2020 01:26:05</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+940ms</span>
+	<span class='label start-time'>Apr 30, 2020 14:34:44</span>
+	<span class='label end-time'>Apr 30, 2020 14:35:18</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+963ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -160,17 +160,41 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>1:25:48 AM</td>
+				<td class='timestamp'>2:34:45 PM</td>
 				<td class='step-details'>
 						<span class='badge white-text green'>ExpediaTitleValidation Test Case PASSED</span>
 					
 				</td>
 			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>1:26:05 AM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:35:17 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text green'>ValidateLogo Test Case PASSED</span>
+						<span class='badge white-text red'>ValidateLogo - TEST CASE FAILED</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:35:17 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='header-logo']//img"}
+  (Session info: chrome=81.0.4044.122)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
+System info: host: 'ZKAPADIA-LT', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\zkapadia\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97b1add98fc19a10a76f520a2378295f
+*** Element info: {Using=xpath, value=//a[@id='header-logo']//img} - TEST CASE FAILED</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:35:18 PM</td>
+				<td class='step-details'>
+						Test Case Failed Snapshot is below com.aventstack.extentreports.ExtentTest@64693226
 					
 				</td>
 			</tr>
@@ -219,19 +243,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 26, 2020 01:25:34</div>
+					<div class='panel-lead'>Apr 30, 2020 14:33:58</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 26, 2020 01:26:06</div>
+			 		<div class='panel-lead'>Apr 30, 2020 14:35:18</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 31s+522ms</div>
+					<div class='panel-lead'>0h 1m 20s+199ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -275,13 +299,13 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -306,7 +330,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Validate Expedia title":18.94
+			        "Validate Expedia title":33.963
 			};
 		</script>
 	
