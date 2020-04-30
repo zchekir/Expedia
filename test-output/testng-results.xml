@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25488" started-at="2020-04-29T18:17:42 EDT" finished-at="2020-04-29T18:18:08 EDT">
+  <suite name="Default suite" duration-ms="30394" started-at="2020-04-30T16:18:25 EDT" finished-at="2020-04-30T16:18:55 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25488" started-at="2020-04-29T18:17:42 EDT" finished-at="2020-04-29T18:18:08 EDT">
-      <class name="com.expedia.TestCases.SigninTest">
-        <test-method status="FAIL" signature="Signin()[pri:0, instance:com.expedia.TestCases.SigninTest@4671e53b]" name="Signin" duration-ms="25413" started-at="2020-04-29T18:17:42 EDT" finished-at="2020-04-29T18:18:08 EDT">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+    <test name="Default test" duration-ms="30394" started-at="2020-04-30T16:18:25 EDT" finished-at="2020-04-30T16:18:55 EDT">
+      <class name="com.expedia.TestCases.CreatingAccountTest">
+        <test-method status="PASS" signature="extentReportSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="extentReportSetup" is-config="true" duration-ms="182" started-at="2020-04-30T16:18:25 EDT" finished-at="2020-04-30T16:18:25 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportSetup -->
+        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="browserSetup" is-config="true" duration-ms="10895" started-at="2020-04-30T16:18:25 EDT" finished-at="2020-04-30T16:18:36 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="ExpediaTitleValidation()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="ExpediaTitleValidation" duration-ms="1991" started-at="2020-04-30T16:18:36 EDT" finished-at="2020-04-30T16:18:38 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExpediaTitleValidation -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="getResult" is-config="true" duration-ms="1542" started-at="2020-04-30T16:18:38 EDT" finished-at="2020-04-30T16:18:39 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ExpediaTitleValidation status=SUCCESS method=CreatingAccountTest.ExpediaTitleValidation()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="browserSetup" is-config="true" duration-ms="9047" started-at="2020-04-30T16:18:39 EDT" finished-at="2020-04-30T16:18:48 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="FAIL" signature="ValidateLogo()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="ValidateLogo" duration-ms="3508" started-at="2020-04-30T16:18:48 EDT" finished-at="2020-04-30T16:18:52 EDT">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[element click intercepted: Element <button type="submit" class="btn-primary btn-action gss-col-12" id="gss-signin-submit" aria-label="Sign In">...</button> is not clickable at point (951, 586). Other element would receive the click: <div class="QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_content QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_content-compact QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_border-radius-very-rounded QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_drop-shadow-heavy" role="dialog" aria-modal="true" aria-labelledby="QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3-headline" aria-describedby="QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3-description" style="background-color: rgb(255, 255, 255); opacity: 1; transition: transform 1s ease 0s, opacity 0.5s ease 0s;">...</div>
-  (Session info: chrome=81.0.4044.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ZKAPADIA-LT', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\zkapadia\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59930}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f3392af5562abc321b9af1b8a2db8987]]>
+              <![CDATA[expected [fail] but found [this]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="btn-primary btn-action gss-col-12" id="gss-signin-submit" aria-label="Sign In">...</button> is not clickable at point (951, 586). Other element would receive the click: <div class="QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_content QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_content-compact QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_border-radius-very-rounded QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3_drop-shadow-heavy" role="dialog" aria-modal="true" aria-labelledby="QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3-headline" aria-describedby="QSIWebResponsiveDialog-Layout1-SI_3DF36Tp5MPTeHl3-description" style="background-color: rgb(255, 255, 255); opacity: 1; transition: transform 1s ease 0s, opacity 0.5s ease 0s;">...</div>
-  (Session info: chrome=81.0.4044.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ZKAPADIA-LT', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\zkapadia\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59930}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f3392af5562abc321b9af1b8a2db8987
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy23.click(Unknown Source)
-at com.expedia.PageObjects.HomePage.login(HomePage.java:29)
-at com.expedia.TestCases.SigninTest.Signin(SigninTest.java:17)
+              <![CDATA[java.lang.AssertionError: expected [fail] but found [this]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.expedia.TestCases.CreatingAccountTest.ValidateLogo(CreatingAccountTest.java:76)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -76,11 +77,26 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Signin -->
-      </class> <!-- com.expedia.TestCases.SigninTest -->
+        </test-method> <!-- ValidateLogo -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="getResult" is-config="true" duration-ms="2691" started-at="2020-04-30T16:18:52 EDT" finished-at="2020-04-30T16:18:55 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateLogo status=FAILURE method=CreatingAccountTest.ValidateLogo()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@2b48a640]" name="endReport" is-config="true" duration-ms="486" started-at="2020-04-30T16:18:55 EDT" finished-at="2020-04-30T16:18:55 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.expedia.TestCases.CreatingAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

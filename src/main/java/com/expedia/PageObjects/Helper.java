@@ -63,7 +63,7 @@ public class Helper {
 		if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.setHeadless(false);
+			//options.setHeadless(false);
 			options.setAcceptInsecureCerts(true);
 			options.addArguments("disable-extensions", "disable-popup-blocking");
 			// to hide "Chrome is being controlled by automated" infobar message

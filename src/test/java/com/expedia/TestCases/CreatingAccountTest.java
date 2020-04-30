@@ -21,6 +21,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.expedia.PageObjects.Helper;
@@ -72,19 +73,20 @@ public class CreatingAccountTest extends Helper {
 		// store file in our local machine
 		File destFile = new File(System.getProperty("user.dir") + "/Screenshots/header-logo.png");
 		FileUtils.copyFile(file, destFile);
+		Assert.assertEquals("this", "fail");
 	}
 	
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			// add testcase name to extent report and style with markuphelper
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - TEST CASE FAILED", ExtentColor.RED));
+			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case FAILED", ExtentColor.RED));
 			// add error/exception to report
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - TEST CASE FAILED", ExtentColor.RED));
+			test.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case FAILED", ExtentColor.RED));
 			// take screenshot using function defined in helper class
 			String screenshotPath = getScreenshot(driver, result.getName());
 			// fail test and add screenshot to extent report
-			test.fail("Test Case Failed Snapshot is below " + test.addScreenCaptureFromPath(screenshotPath));
+			test.log(Status.INFO, "Test Failed Snapshot is below " + test.addScreenCaptureFromPath(screenshotPath));
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case SKIPPED", ExtentColor.ORANGE)); 
 		} else if (result.getStatus() == ITestResult.SUCCESS) {

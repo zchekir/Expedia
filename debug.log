@@ -5,3 +5,6 @@
 [0422/180710.860:ERROR:file_io_win.cc(161)] CreateFile C:\Users\zkapadia\AppData\Local\Temp\scoped_dir4072_957114734\Crashpad\settings.dat: The system cannot find the file specified. (0x2)
 [0422/181421.739:ERROR:file_io_win.cc(161)] CreateFile C:\Users\zkapadia\AppData\Local\Temp\scoped_dir25736_1538939139\Crashpad\settings.dat: The system cannot find the file specified. (0x2)
 [0423/181837.827:ERROR:file_io_win.cc(161)] CreateFile C:\Users\zkapadia\AppData\Local\Temp\scoped_dir15548_1268971557\Crashpad\settings.dat: The system cannot find the file specified. (0x2)
+[0430/144907.401:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0430/144907.402:ERROR:exception_snapshot_win.cc(98)] thread ID 28664 not found in process
+[0430/144907.402:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)

@@ -24,10 +24,10 @@
         <protocol>https</protocol>
         
         <!-- title of the document -->
-        <documentTitle>Extent Framework</documentTitle>
+        <documentTitle>ExtentReports 4.1</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>Extent Report For Expedia Project</reportName>
+        <reportName>Report For Expedia Project</reportName>
 
 		<!-- timestamp format -->
 		<timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
