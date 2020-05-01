@@ -5,10 +5,10 @@
     <classes>
       <class name="com.expedia.TestCases.CreatingAccountTest">
         <methods>
-          <include name="ValidateLogo"/>
+          <include name="verifyLogo"/>
           <include name="browserSetup"/>
-          <include name="endReport"/>
           <include name="extentReportSetup"/>
+          <include name="expediaTitleValidation"/>
           <include name="getResult"/>
         </methods>
       </class> <!-- com.expedia.TestCases.CreatingAccountTest -->

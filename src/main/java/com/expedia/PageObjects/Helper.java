@@ -51,13 +51,17 @@ public class Helper {
 	protected String htmlReporterConfigPath = System.getProperty("user.dir") + "/src/main/resources/htmlreporter-config.xml";
 	
 	
-	public static void loadDataPropFile() throws Exception {
-		// load data.properties file
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/data.properties");
-		prop.load(file);
+	public static void loadDataPropFile() {
+		try {
+			FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/data.properties");
+			prop.load(file);
+		} catch (IOException e) {
+			System.out.println("Failed to load data properties file " + e.getMessage());
+		}
+		
 	}
 	
-	public static void OpenBrowser() throws Exception {
+	public static void OpenBrowser() {
 		loadDataPropFile();
 		// configuring drivers
 		if (prop.getProperty("browser").equalsIgnoreCase("chrome")){
@@ -92,20 +96,25 @@ public class Helper {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
-
+		
 	}
 	
 	// to take screenshots
-	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
+	public static String getScreenshot(WebDriver driver, String screenshotName) {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
+		File src = ts.getScreenshotAs(OutputType.FILE);
 	  
 		// store screenshot in local project directory
-		String destination = System.getProperty("user.dir") + "/Screenshots/" + screenshotName + dateName + ".png";
-		File finalDestination = new File(destination);
-		FileUtils.copyFile(source, finalDestination);
-		return destination;
+		String path = System.getProperty("user.dir") + "/Screenshots/" + screenshotName + dateName + ".png";
+		File destination = new File(path);
+		try {
+			FileUtils.copyFile(src, destination);
+		} catch(IOException e) {
+			System.out.println("Screenshot capture failed " + e.getMessage());
+		}
+		
+		return path;
 	}
 	
 }

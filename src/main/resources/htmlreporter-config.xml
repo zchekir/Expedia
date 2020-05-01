@@ -24,7 +24,7 @@
         <protocol>https</protocol>
         
         <!-- title of the document -->
-        <documentTitle>ExtentReports 4.1</documentTitle>
+        <documentTitle>Extent Report 4.1</documentTitle>
         
         <!-- report name - displayed at top-nav -->
         <reportName>Report For Expedia Project</reportName>
