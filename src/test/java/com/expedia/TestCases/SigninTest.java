@@ -4,17 +4,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.expedia.PageObjects.Helper;
-import com.expedia.PageObjects.HomePage;
+import com.expedia.PageObjects.SigninPage;
 
 public class SigninTest extends Helper{
 
 	@Test
-	public void Signin() throws Exception {
+	public void signinValidUser() throws Exception {
 		OpenBrowser();
-		HomePage homePage = new HomePage();
+		SigninPage signinPage = new SigninPage();
 		// PageFactory is used to find elements with @FindBy specified
-		PageFactory.initElements(driver, homePage);
-		homePage.login(prop.getProperty("email"), prop.getProperty("password"));
+		PageFactory.initElements(driver, signinPage);
+		signinPage.loginValidUser(prop.getProperty("email"), prop.getProperty("password"));
 		
 		// how to deal with security captcha?
 	}

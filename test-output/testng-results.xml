@@ -1,166 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43312" started-at="2020-05-01T12:13:15 EDT" finished-at="2020-05-01T12:13:58 EDT">
+  <suite name="Default suite" duration-ms="10877" started-at="2020-05-06T13:09:04 EDT" finished-at="2020-05-06T13:09:15 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43312" started-at="2020-05-01T12:13:15 EDT" finished-at="2020-05-01T12:13:58 EDT">
-      <class name="com.expedia.TestCases.CreatingAccountTest">
-        <test-method status="PASS" signature="extentReportSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b]" name="extentReportSetup" is-config="true" duration-ms="137" started-at="2020-05-01T12:13:15 EDT" finished-at="2020-05-01T12:13:15 EDT">
+    <test name="Default test" duration-ms="10877" started-at="2020-05-06T13:09:04 EDT" finished-at="2020-05-06T13:09:15 EDT">
+      <class name="com.expedia.TestCases.SigninTest">
+        <test-method status="PASS" signature="signinValidUser()[pri:0, instance:com.expedia.TestCases.SigninTest@ed9d034]" name="signinValidUser" duration-ms="10834" started-at="2020-05-06T13:09:04 EDT" finished-at="2020-05-06T13:09:15 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- extentReportSetup -->
-        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b]" name="browserSetup" is-config="true" duration-ms="10290" started-at="2020-05-01T12:13:15 EDT" finished-at="2020-05-01T12:13:25 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method status="FAIL" signature="expediaTitleValidation()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b]" name="expediaTitleValidation" duration-ms="127" started-at="2020-05-01T12:13:25 EDT" finished-at="2020-05-01T12:13:26 EDT">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Expediassssss Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations] but found [Expedia Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Expediassssss Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations] but found [Expedia Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at com.expedia.TestCases.CreatingAccountTest.expediaTitleValidation(CreatingAccountTest.java:60)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- expediaTitleValidation -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b]" name="getResult" is-config="true" duration-ms="2460" started-at="2020-05-01T12:13:26 EDT" finished-at="2020-05-01T12:13:28 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=expediaTitleValidation status=FAILURE method=CreatingAccountTest.expediaTitleValidation()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b]" name="browserSetup" is-config="true" duration-ms="8263" started-at="2020-05-01T12:13:28 EDT" finished-at="2020-05-01T12:13:36 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method status="FAIL" signature="verifyLogo()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b]" name="verifyLogo" duration-ms="20108" started-at="2020-05-01T12:13:36 EDT" finished-at="2020-05-01T12:13:56 EDT">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='header-logo uitk-cell all-cell-shrink all-y-padding-two all-r-padding-two']//img"}
-  (Session info: chrome=81.0.4044.129)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ZKAPADIA-LT', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\zkapadia\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56226}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: ecf106571ecc36c2b2659b4efda6982a
-*** Element info: {Using=xpath, value=//a[@class='header-logo uitk-cell all-cell-shrink all-y-padding-two all-r-padding-two']//img}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='header-logo uitk-cell all-cell-shrink all-y-padding-two all-r-padding-two']//img"}
-  (Session info: chrome=81.0.4044.129)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ZKAPADIA-LT', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\zkapadia\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56226}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: ecf106571ecc36c2b2659b4efda6982a
-*** Element info: {Using=xpath, value=//a[@class='header-logo uitk-cell all-cell-shrink all-y-padding-two all-r-padding-two']//img}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.expedia.TestCases.CreatingAccountTest.verifyLogo(CreatingAccountTest.java:67)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogo -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b]" name="getResult" is-config="true" duration-ms="1885" started-at="2020-05-01T12:13:56 EDT" finished-at="2020-05-01T12:13:58 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLogo status=FAILURE method=CreatingAccountTest.verifyLogo()[pri:0, instance:com.expedia.TestCases.CreatingAccountTest@3fb1549b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-      </class> <!-- com.expedia.TestCases.CreatingAccountTest -->
+        </test-method> <!-- signinValidUser -->
+      </class> <!-- com.expedia.TestCases.SigninTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

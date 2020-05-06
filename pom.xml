@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.expedia</groupId>
-  <artifactId>Expedia</artifactId>
+  <artifactId>expedia</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Expedia</name>
@@ -37,7 +37,7 @@
 		  <artifactId>maven-compiler-plugin</artifactId>
 		  <version>3.8.1</version>
         </plugin>
-      	<!--  To run all test cases and generate test reports -->
+      	<!--  To run all test cases and generate maven reports -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
