@@ -26,9 +26,9 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.expedia.PageObjects.Helper;
 
 @SuppressWarnings("deprecation")
-public class CreatingAccountTest extends Helper {
+public class TestSignup extends Helper {
 	// creating log object for logging messages to console/main.log file
-	private static final Logger logger = LogManager.getLogger(CreatingAccountTest.class);
+	private static final Logger logger = LogManager.getLogger(TestSignup.class);
 	
 	@BeforeTest
 	public void extentReportSetup() {
@@ -49,26 +49,26 @@ public class CreatingAccountTest extends Helper {
 	@BeforeMethod
 	public void browserSetup() {
 		OpenBrowser();
-		logger.info("Navigated to expedia.com");
+		logger.info("Navigated to https://zk-yelpcamp.herokuapp.com");
 	}
 	
 	@Test 
 	public void validateTitle() {
-		test = extent.createTest("Validate Expedia Title");
-		Assert.assertEquals(driver.getTitle(), "Expedia Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations");
+		test = extent.createTest("Validate webpage title");
+		Assert.assertEquals(driver.getTitle(), "Yelp Camp");
 		logger.info("Validated document tab title");
 	}
 	
 	//@Test
 	public void verifyLogo() throws IOException {
-		test = extent.createTest("Verify Expedia Logo");
-		WebElement headerLogo = driver.findElement(By.xpath("//a[@class='header-logo uitk-cell all-cell-shrink all-y-padding-two all-r-padding-two']//img"));
+		test = extent.createTest("Verify YelpCamp Logo");
+		WebElement headerLogo = driver.findElement(By.id("navbar-brand-img"));
 		// get screenshot of element and store as a file
 		File file = headerLogo.getScreenshotAs(OutputType.FILE);
 		// store file in our local machine
 		File destFile = new File(System.getProperty("user.dir") + "/Screenshots/header-logo.png");
 		FileUtils.copyFile(file, destFile);
-		logger.info("Verified expedia logo on homepage");
+		logger.info("Verified YelpCamp logo");
 	}
 	
 	@AfterMethod

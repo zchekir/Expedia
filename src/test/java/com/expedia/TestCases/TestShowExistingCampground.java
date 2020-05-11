@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.expedia.PageObjects.Helper;
 
-public class SearchingFlightReservationTest extends Helper {
+public class TestShowExistingCampground extends Helper {
 	
 	@Test
 	public void SearchingFlightReservation() throws Exception {

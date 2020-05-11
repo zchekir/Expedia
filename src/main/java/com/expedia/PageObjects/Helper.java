@@ -87,7 +87,6 @@ public class Helper {
 			InternetExplorerOptions ieOptions = new InternetExplorerOptions();
 			ieOptions.ignoreZoomSettings();
 			ieOptions.introduceFlakinessByIgnoringSecurityDomains();
-
 			driver = new InternetExplorerDriver(ieOptions);
 		} 
 		else System.out.println("Please enter a valid browser");
