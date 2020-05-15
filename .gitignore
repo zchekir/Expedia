@@ -1,1 +1,7 @@
 /target/
+/bin/
+/test-output/junitreports
+/test-output/Default_suite
+/test-output/old
+/test-output/emailable-report.html
+/test-output/index.html

@@ -1,0 +1,12 @@
+2020-05-01 11:30:10,514 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-05-01 11:30:18,962 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-05-01 11:37:21,407 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-05-01 11:37:24,550 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-05-01 11:40:09,525 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-05-01 11:40:16,655 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-05-01 11:52:37,387 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-05-01 11:52:43,678 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-05-01 12:13:25,901 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-05-01 12:13:28,501 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-05-01 12:13:36,765 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
+2020-05-01 12:13:58,762 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
