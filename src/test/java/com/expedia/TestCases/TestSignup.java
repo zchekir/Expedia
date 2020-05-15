@@ -1,6 +1,5 @@
 package com.expedia.TestCases;
 
-
 import java.io.File;
 import java.io.IOException;
 

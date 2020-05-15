@@ -79,6 +79,14 @@
 	  <version>4.0.0-alpha-5</version>
     </dependency>
     
+    <!-- to use appium -->
+    <dependency>
+      <groupId>io.appium</groupId>
+      <artifactId>java-client</artifactId>
+      <version>7.3.0</version>
+	</dependency>
+    
+    <!-- to get utilities and file filters -->
 	<dependency>
 	  <groupId>commons-io</groupId>
 	  <artifactId>commons-io</artifactId>
@@ -103,7 +111,7 @@
       <artifactId>json-schema-validator</artifactId>
       <version>4.3.0</version>
       <scope>test</scope>
-</dependency>
+	</dependency>
 
     <!-- to use testng -->
     <dependency>
