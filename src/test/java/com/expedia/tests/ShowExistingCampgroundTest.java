@@ -1,10 +1,8 @@
-package com.expedia.TestCases;
+package com.expedia.tests;
 
 import org.testng.annotations.Test;
 
-import com.expedia.PageObjects.Helper;
-
-public class TestShowExistingCampground extends Helper {
+public class ShowExistingCampgroundTest extends HelperClassTest {
 	
 	@Test
 	public void SearchingFlightReservation() throws Exception {

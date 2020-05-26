@@ -27,7 +27,7 @@
         <documentTitle>Extent Report 4.1</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>Report For Expedia Project</reportName>
+        <reportName>Expedia Project Report</reportName>
 
 		<!-- timestamp format -->
 		<timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>

@@ -1,12 +1,16 @@
-2020-05-01 11:30:10,514 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
-2020-05-01 11:30:18,962 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
-2020-05-01 11:37:21,407 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
-2020-05-01 11:37:24,550 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
-2020-05-01 11:40:09,525 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
-2020-05-01 11:40:16,655 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
-2020-05-01 11:52:37,387 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
-2020-05-01 11:52:43,678 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
-2020-05-01 12:13:25,901 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
-2020-05-01 12:13:28,501 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
-2020-05-01 12:13:36,765 INFO c.e.T.CreatingAccountTest [main] Navigated to expedia.com
-2020-05-01 12:13:58,762 INFO c.e.T.CreatingAccountTest [main] Closing down all browsers
+2020-05-26 14:09:49,690 INFO c.e.T.TestSignup [main] Validated document tab title
+2020-05-26 14:12:08,246 INFO c.e.T.TestSignup [main] Validated document tab title
+2020-05-26 16:30:22,548 INFO c.e.T.TestSignup [main] Validated document tab title
+2020-05-26 16:34:39,203 INFO c.e.T.TestSignup [main] Validated document tab title
+2020-05-26 17:15:58,636 INFO c.e.T.TestSignup [main] Validated document tab title
+2020-05-26 18:02:07,735 INFO c.e.t.HelperClassTest [main] Extent report setup and configured.
+2020-05-26 18:02:29,193 INFO c.e.t.HelperClassTest [main] Browser starting up
+2020-05-26 18:02:29,244 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-05-26 18:02:29,261 INFO c.e.t.HelperClassTest [main] Getting test status result for the executed test case...
+2020-05-26 18:02:30,278 INFO c.e.t.HelperClassTest [main] Test result sent to extent report.
+2020-05-26 18:12:47,045 INFO c.e.t.HelperClassTest [main] Extent report setup and configured.
+2020-05-26 18:12:57,897 INFO c.e.t.HelperClassTest [main] Navigating to specified url
+2020-05-26 18:12:57,897 INFO c.e.t.HelperClassTest [main] Browser starting up
+2020-05-26 18:12:57,935 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-05-26 18:12:57,952 INFO c.e.t.HelperClassTest [main] Getting test status result for the executed test case...
+2020-05-26 18:12:58,712 INFO c.e.t.HelperClassTest [main] Test result sent to extent report.

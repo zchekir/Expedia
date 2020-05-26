@@ -1,4 +1,4 @@
-package com.expedia.TestCases;
+package com.expedia.tests;
 
 import java.io.FileInputStream;
 
@@ -9,9 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import com.expedia.PageObjects.Helper;
-
-public class DataTest extends Helper {
+public class DataTest extends HelperClassTest {
 	
 	static DataFormatter dataFormatter = new DataFormatter();
 

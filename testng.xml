@@ -3,9 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.expedia.TestCases.BookingFlightTest"/>
-      <class name="com.expedia.TestCases.SearchingFlightReservationTest"/>
-      <class name="com.expedia.TestCases.CreatingAccountTest"/>
+      <class name="com.expedia.tests.LoginTest"/>
+      <class name="com.expedia.tests.SignupTest"/>
+      <class name="com.expedia.tests.AddNewCampgroundTest"/>
+      <class name="com.expedia.tests.ReviewsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

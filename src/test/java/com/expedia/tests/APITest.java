@@ -1,4 +1,4 @@
-package com.expedia.TestCases;
+package com.expedia.tests;
 
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;

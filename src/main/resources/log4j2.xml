@@ -21,7 +21,7 @@
     <Loggers>
 
         <!-- asynchronous loggers -->
-        <AsyncLogger name="com.expedia.TestCases" level="info" additivity="false">
+        <AsyncLogger name="com.expedia.tests" level="info" additivity="false">
             <AppenderRef ref="LogToRollingRandomAccessFile"/>
             <AppenderRef ref="LogToConsole"/>
         </AsyncLogger>

@@ -1,4 +1,4 @@
-package com.expedia.PageObjects;
+package com.expedia.webpages;
 
 public class SignupPage {
 

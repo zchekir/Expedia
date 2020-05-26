@@ -3,11 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.expedia.TestCases.APITest">
+      <class name="com.expedia.TestCases.TestSignup">
         <methods>
-          <include name="settingUp"/>
+          <include name="validateTitle"/>
+          <include name="getResult"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.expedia.TestCases.APITest -->
+      </class> <!-- com.expedia.TestCases.TestSignup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

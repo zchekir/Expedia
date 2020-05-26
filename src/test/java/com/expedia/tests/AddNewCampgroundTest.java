@@ -1,11 +1,9 @@
-package com.expedia.TestCases;
+package com.expedia.tests;
 
 import org.testng.annotations.Test;
 
-import com.expedia.PageObjects.Helper;
 
-
-public class TestAddNewCampground extends Helper {
+public class AddNewCampgroundTest extends HelperClassTest {
 	
 	@Test
 		public void addNewCampground() throws Exception {

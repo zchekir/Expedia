@@ -51,13 +51,13 @@
 						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
-		<span class='report-name'>Report For Expedia Project</span>
+		<span class='report-name'>Expedia Project Report</span>
 		<!-- report headline -->
 		<span class='report-headline'></span>
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>May 01, 2020 12:13:15</span>
+			<span class='label blue darken-3 suite-start-time'>May 26, 2020 18:12:46</span>
 			</a>
 		</ul>
 	</div>
@@ -72,7 +72,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -115,10 +115,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -136,17 +136,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Validate Expedia title</span>
-						<span class='test-time'>May 01, 2020 12:13:25</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>SignupTest - validateTitle</span>
+						<span class='test-time'>May 26, 2020 18:12:57</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 01, 2020 12:13:25</span>
-	<span class='label end-time'>May 01, 2020 12:13:26</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+35ms</span>
+	<span class='label start-time'>May 26, 2020 18:12:57</span>
+	<span class='label end-time'>May 26, 2020 18:12:57</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+34ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -158,71 +158,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:13:26 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:57 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>expediaTitleValidation - expected [Expediassssss Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations] but found [Expedia Travel: Search Hotels, Cheap Flights, Car Rentals & Vacations]</span>
+						<span class='badge white-text green'>validateTitle Test Case PASSED</span>
 					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:13:26 PM</td>
-				<td class='step-details'>
-						Test Failed Snapshot is below
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\zkapadia\eclipse-workspace\Expedia/Screenshots/expediaTitleValidation20200501121326.png' src='C:\Users\zkapadia\eclipse-workspace\Expedia/Screenshots/expediaTitleValidation20200501121326.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
-					<div class='test-heading'>
-						<span class='test-name'>Verify Expedia logo</span>
-						<span class='test-time'>May 01, 2020 12:13:36</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>May 01, 2020 12:13:36</span>
-	<span class='label end-time'>May 01, 2020 12:13:57</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+183ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:13:56 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>verifyLogo - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='header-logo uitk-cell all-cell-shrink all-y-padding-two all-r-padding-two']//img"}
-  (Session info: chrome=81.0.4044.129)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ZKAPADIA-LT', ip: '192.168.1.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\zkapadia\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56226}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: ecf106571ecc36c2b2659b4efda6982a
-*** Element info: {Using=xpath, value=//a[@class='header-logo uitk-cell all-cell-shrink all-y-padding-two all-r-padding-two']//img}</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:13:57 PM</td>
-				<td class='step-details'>
-						Test Failed Snapshot is below
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\zkapadia\eclipse-workspace\Expedia/Screenshots/verifyLogo20200501121356.png' src='C:\Users\zkapadia\eclipse-workspace\Expedia/Screenshots/verifyLogo20200501121356.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -258,7 +199,7 @@ Session ID: ecf106571ecc36c2b2659b4efda6982a
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -270,19 +211,19 @@ Session ID: ecf106571ecc36c2b2659b4efda6982a
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 01, 2020 12:13:15</div>
+					<div class='panel-lead'>May 26, 2020 18:12:46</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 01, 2020 12:13:57</div>
+			 		<div class='panel-lead'>May 26, 2020 18:12:57</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 42s+470ms</div>
+					<div class='panel-lead'>0h 0m 11s+58ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -294,26 +235,6 @@ Session ID: ecf106571ecc36c2b2659b4efda6982a
 							<th>Name</th>
 							<th>Value</th>
 						</tr>
-							<tr>
-								<td>Application</td>
-								<td>Expedia</td>
-							</tr>
-							<tr>
-								<td>Environment</td>
-								<td>Production</td>
-							</tr>
-							<tr>
-								<td>OS</td>
-								<td>Windows 10 64-bit</td>
-							</tr>
-							<tr>
-								<td>User</td>
-								<td>ztestuser</td>
-							</tr>
-							<tr>
-								<td>Browser</td>
-								<td>chrome</td>
-							</tr>
 					</table>
 				</div>
 			</div>
@@ -325,14 +246,14 @@ Session ID: ecf106571ecc36c2b2659b4efda6982a
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
-				passParent: 0,
-				failParent: 2,
+                parentCount: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 2,
+				exceptionsParent: 0,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -357,7 +278,7 @@ Session ID: ecf106571ecc36c2b2659b4efda6982a
 		</script>
 		<script>
 			var timeline = {
-			        "Validate Expedia title":1.035,"Verify Expedia logo":21.183
+			        "SignupTest - validateTitle":0.034
 			};
 		</script>
 	
