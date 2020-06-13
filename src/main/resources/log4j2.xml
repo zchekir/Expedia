@@ -1,10 +1,15 @@
-<!-- can change the status to “trace”, “debug”, “info”, “warn”, “error” and “fatal” to enable the internal Log4j events -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- can change status to “trace”, “debug”, “info”, “warn”, “error” or “fatal” to enable level at which internal log4j events will be logged -->
 <Configuration status="INFO">
     <Appenders>
+    	<!-- log messages to System console -->
         <Console name="LogToConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] 
+            %highlight{%level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue} %-5level %logger{36} - %msg%n"/>
         </Console>
-
+        
+		<!-- write messages to rolling log file -->
         <RollingRandomAccessFile name="LogToRollingRandomAccessFile" fileName="logs/app.log"
                                  filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
@@ -16,10 +21,10 @@
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingRandomAccessFile>
-
+        
     </Appenders>
+    
     <Loggers>
-
         <!-- asynchronous loggers -->
         <AsyncLogger name="com.expedia.tests" level="info" additivity="false">
             <AppenderRef ref="LogToRollingRandomAccessFile"/>

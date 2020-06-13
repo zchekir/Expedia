@@ -2,11 +2,11 @@ package com.expedia.tests;
 
 import org.testng.annotations.Test;
 
-public class ShowExistingCampgroundTest extends HelperClassTest {
+public class ShowExistingCampgroundTest extends BaseTest {
 	
 	@Test
-	public void SearchingFlightReservation() throws Exception {
-		DataTest.ReadExcelData();
+	public void searchCampground() throws Exception {
+		
 	}
 
 }

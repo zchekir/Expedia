@@ -1,12 +1,17 @@
 package com.expedia.webpages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage extends com.expedia.tests.HelperClassTest {
+public class LoginPage extends BasePage {
 	
+	// constructor
+	public LoginPage(WebDriver driver) {
+		super(driver);
+	}
+
 	@FindBy(linkText="View All Campgrounds") 
 	private WebElement viewAllCampgroundsLink;
 	
@@ -23,24 +28,29 @@ public class LoginPage extends com.expedia.tests.HelperClassTest {
 	private WebElement loginBtn;
 	
 	
-	public void initWebElements() {
-		// PageFactory is used to find elements with @FindBy specified
-		PageFactory.initElements(driver, this);
-	}
-	
-	
 	public void loginValidUser(String username, String password) {
+		waitForElementToAppear(viewAllCampgroundsLink);
 		viewAllCampgroundsLink.click();
+		waitForElementToAppear(loginLink);
 		loginLink.click();
+		waitForElementToAppear(usernameField);
 		usernameField.sendKeys(username);
+		waitForElementToAppear(passwordField);
 		passwordField.sendKeys(password);
+		waitForElementToAppear(loginBtn);
 		loginBtn.click();
 	}
 	
-	public void loginInValidUser(String username, String password) {
+	public void loginInvalidUser(String username, String password) {
+		waitForElementToAppear(viewAllCampgroundsLink);
+		viewAllCampgroundsLink.click();
+		waitForElementToAppear(loginLink);
 		loginLink.click();
+		waitForElementToAppear(usernameField);
 		usernameField.sendKeys(username);
+		waitForElementToAppear(passwordField);
 		passwordField.sendKeys(password);
+		waitForElementToAppear(loginBtn);
 		loginBtn.click();
 	}
 	

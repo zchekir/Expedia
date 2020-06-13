@@ -1,5 +1,11 @@
 package com.expedia.webpages;
 
-public class LandingPage {
+import org.openqa.selenium.WebDriver;
+
+public class LandingPage extends BasePage {
+
+	public LandingPage(WebDriver driver) {
+		super(driver);
+	}
 
 }

@@ -9,13 +9,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class DataTest extends HelperClassTest {
+public class DataTest extends BaseTest {
 	
 	static DataFormatter dataFormatter = new DataFormatter();
 
 	@Test
-	public static void ReadExcelData() throws Exception {
-		OpenBrowser();
+	public void ReadExcelData() throws Exception {
 		try {
 			FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/TestData.xlsx");
 		
@@ -26,7 +25,7 @@ public class DataTest extends HelperClassTest {
 				// Import second row, first cell data
 		        cell = sheet.getRow(i).getCell(0);
 		        cell.setCellType(CellType.STRING);
-		        WebElement destination = driver.findElement(By.xpath("//input[@id='hotel-destination-hp-hotel']"));
+		        WebElement destination = getDriver().findElement(By.xpath("//input[@id='hotel-destination-hp-hotel']"));
 		        destination.sendKeys(cell.getStringCellValue());
 		
 		        // Import second row, second cell data
@@ -34,11 +33,10 @@ public class DataTest extends HelperClassTest {
 		        cell.setCellType(CellType.NUMERIC);	// date stored as numeric
 		        String cellStringValue = dataFormatter.formatCellValue(cell);
 		        //System.out.println("data in excel file: " + cellStringValue);
-		        WebElement checkIn = driver.findElement(By.xpath("//input[@id='hotel-checkin-hp-hotel']"));
+		        WebElement checkIn = getDriver().findElement(By.xpath("//input[@id='hotel-checkin-hp-hotel']"));
 		        checkIn.sendKeys(cellStringValue);
 	
 		        workbook.close();
-		        driver.close();
 			}
 		}
 		

@@ -1,16 +1,63 @@
-2020-05-26 14:09:49,690 INFO c.e.T.TestSignup [main] Validated document tab title
-2020-05-26 14:12:08,246 INFO c.e.T.TestSignup [main] Validated document tab title
-2020-05-26 16:30:22,548 INFO c.e.T.TestSignup [main] Validated document tab title
-2020-05-26 16:34:39,203 INFO c.e.T.TestSignup [main] Validated document tab title
-2020-05-26 17:15:58,636 INFO c.e.T.TestSignup [main] Validated document tab title
-2020-05-26 18:02:07,735 INFO c.e.t.HelperClassTest [main] Extent report setup and configured.
-2020-05-26 18:02:29,193 INFO c.e.t.HelperClassTest [main] Browser starting up
-2020-05-26 18:02:29,244 INFO c.e.t.SignupTest [main] Validated document tab title
-2020-05-26 18:02:29,261 INFO c.e.t.HelperClassTest [main] Getting test status result for the executed test case...
-2020-05-26 18:02:30,278 INFO c.e.t.HelperClassTest [main] Test result sent to extent report.
-2020-05-26 18:12:47,045 INFO c.e.t.HelperClassTest [main] Extent report setup and configured.
-2020-05-26 18:12:57,897 INFO c.e.t.HelperClassTest [main] Navigating to specified url
-2020-05-26 18:12:57,897 INFO c.e.t.HelperClassTest [main] Browser starting up
-2020-05-26 18:12:57,935 INFO c.e.t.SignupTest [main] Validated document tab title
-2020-05-26 18:12:57,952 INFO c.e.t.HelperClassTest [main] Getting test status result for the executed test case...
-2020-05-26 18:12:58,712 INFO c.e.t.HelperClassTest [main] Test result sent to extent report.
+2020-06-13 13:56:10,844 INFO c.e.t.BaseTest [main] Extent report setup and configured.
+2020-06-13 13:59:13,411 INFO c.e.t.BaseTest [main] Extent report setup and configured.
+2020-06-13 14:00:39,024 INFO c.e.t.BaseTest [main] Extent report setup and configured.
+2020-06-13 14:02:42,256 INFO c.e.t.BaseTest [main] Extent report setup and configured.
+2020-06-13 14:02:46,337 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 14:02:47,615 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 14:02:50,658 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 14:02:52,369 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 14:21:36,469 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 14:21:40,275 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 14:21:40,448 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 14:21:41,606 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 14:21:47,670 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 14:21:50,459 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 14:22:28,225 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 14:22:32,259 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 14:22:32,390 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 14:22:33,574 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 14:22:37,377 INFO c.e.t.SignupTest [main] Verified YelpCamp logo
+2020-06-13 14:22:37,407 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 14:22:39,255 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 16:17:53,948 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 16:17:54,171 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 16:17:54,216 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 16:17:54,630 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:17:58,478 INFO c.e.t.SignupTest [main] Verified YelpCamp logo
+2020-06-13 16:17:58,496 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:17:59,261 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 16:23:00,510 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 16:23:00,808 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 16:23:00,907 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 16:23:01,508 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:23:05,383 INFO c.e.t.SignupTest [main] Verified YelpCamp logo
+2020-06-13 16:23:05,403 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:23:06,217 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 16:29:23,913 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 16:29:24,224 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 16:29:24,280 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 16:29:24,747 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:29:28,522 INFO c.e.t.SignupTest [main] Verified YelpCamp logo
+2020-06-13 16:29:28,552 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:29:29,351 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 16:40:31,352 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 16:40:31,599 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 16:40:31,642 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 16:40:32,068 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:40:35,823 INFO c.e.t.SignupTest [main] Verified YelpCamp logo
+2020-06-13 16:40:35,853 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 16:40:36,638 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 17:01:42,345 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 17:01:42,576 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 17:01:42,638 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 17:01:43,361 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 17:01:47,199 INFO c.e.t.SignupTest [main] Verified YelpCamp logo
+2020-06-13 17:01:47,225 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 17:01:48,038 INFO c.e.t.BaseTest [main] Closed all browsers.
+2020-06-13 17:07:33,831 INFO c.e.t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-06-13 17:07:34,134 INFO c.e.t.BaseTest [main] Extent report has been setup and configured.
+2020-06-13 17:07:34,212 INFO c.e.t.SignupTest [main] Validated document tab title
+2020-06-13 17:07:34,877 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 17:07:38,750 INFO c.e.t.SignupTest [main] Verified YelpCamp logo
+2020-06-13 17:07:38,780 INFO c.e.t.BaseTest [main] Sending test result for the executed test case.
+2020-06-13 17:07:39,608 INFO c.e.t.BaseTest [main] Closed all browsers.

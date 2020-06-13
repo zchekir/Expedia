@@ -5,9 +5,10 @@
   <artifactId>expedia</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Expedia</name>
-  <description>This is expedia.com with full-scale automation testing framework</description>
-  <url>http://maven.apache.org</url>
+  
+  <name>YelpCamp</name>
+  <description>In house testing for local website</description>
+  <url>https://zk-yelpcamp.herokuapp.com</url>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,12 +28,12 @@
   	
   </profiles>
   
+  <!-- Plug-ins required for executing tests -->
   <build>
-  	
     <pluginManagement>
       <plugins>
         <plugin>
-        <!-- to compile java sources of project -->
+        <!-- to compile source code for project -->
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-compiler-plugin</artifactId>
 		  <version>3.8.1</version>
@@ -44,12 +45,13 @@
           <version>3.0.0-M4</version>
           <configuration>
             <suiteXmlFiles>
+              <!-- TestNG suite XML files -->
               <suiteXmlFile>testng.xml</suiteXmlFile>
             </suiteXmlFiles>
           </configuration>
         </plugin>
         
-        <!-- this plugin displays the active profile being used in compile phase -->
+        <!-- this plug-in displays the active profile being used in compile phase -->
 		<plugin>
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-help-plugin</artifactId>
@@ -67,10 +69,9 @@
         
       </plugins>
     </pluginManagement>
-    
   </build>
   
-  
+  <!-- Dependencies needed for executing tests -->
   <dependencies>
     <!-- to use selenium version 4 -->
 	<dependency>
