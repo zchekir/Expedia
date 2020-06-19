@@ -1,4 +1,4 @@
-package com.expedia.tests;
+package tests;
 
 import java.io.File;
 import java.io.IOException;

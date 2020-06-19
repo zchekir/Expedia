@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.expedia.tests.SignupTest">
+      <class name="tests.LoginTest">
         <methods>
-          <include name="quitBrowsers"/>
-          <include name="verifyLogo"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-          <include name="getResult"/>
+          <include name="loginValidUser"/>
+          <include name="getTestResult"/>
+          <include name="setClassAndTestCaseNames"/>
+          <include name="quitAllBrowsers"/>
+          <include name="startupBrowser"/>
         </methods>
-      </class> <!-- com.expedia.tests.SignupTest -->
+      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

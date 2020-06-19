@@ -1,4 +1,4 @@
-package com.expedia.tests;
+package tests;
 
 public class MobileAppiumTest {
 	

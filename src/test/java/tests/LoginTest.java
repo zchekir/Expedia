@@ -1,26 +1,28 @@
-package com.expedia.tests;
+package tests;
 
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
-import com.expedia.webpages.LoginPage;
+import pageObjects.LoginPage;
+import utility.Constant;
 
 public class LoginTest extends BaseTest {
 	Logger logger = LogManager.getLogger(LoginTest.class);
+	LoginPage loginPage;
 	
-	//@Test(description="Attempt to login with invalid credentials")
+	//@Test
 	public void loginInvalidUser() {
-		LoginPage loginPage = new LoginPage(getDriver());
+		loginPage = new LoginPage(super.getDriver());
 		loginPage.loginInvalidUser("invalidUser", "invalidPassword");
 	}
 	
 	@Test
 	public void loginValidUser() {
-		LoginPage loginPage = new LoginPage(getDriver());
-		loginPage.loginValidUser(prop.getProperty("username"), prop.getProperty("password"));
-		logger.info("User has logged in");
+		loginPage = new LoginPage(super.getDriver());
+		loginPage.loginValidUser(Constant.Username, Constant.Password);
+		logger.info("TESTINGGGGGGG");
 	}
 	
 	

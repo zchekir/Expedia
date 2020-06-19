@@ -1,73 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4648" started-at="2020-06-13T17:07:34 EDT" finished-at="2020-06-13T17:07:38 EDT">
+  <suite name="Default suite" duration-ms="2391" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:47 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4648" started-at="2020-06-13T17:07:34 EDT" finished-at="2020-06-13T17:07:38 EDT">
-      <class name="com.expedia.tests.SignupTest">
-        <test-method status="PASS" signature="startupBrowser()[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="startupBrowser" is-config="true" duration-ms="8828" started-at="2020-06-13T17:07:25 EDT" finished-at="2020-06-13T17:07:34 EDT">
+    <test name="Default test" duration-ms="2391" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:47 EDT">
+      <class name="tests.LoginTest">
+        <test-method status="PASS" signature="startupBrowser()[pri:0, instance:tests.LoginTest@51c668e3]" name="startupBrowser" is-config="true" duration-ms="8276" started-at="2020-06-18T18:02:37 EDT" finished-at="2020-06-18T18:02:45 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startupBrowser -->
-        <test-method status="PASS" signature="setClassAndTestCaseNames(java.lang.reflect.Method)[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="setClassAndTestCaseNames" is-config="true" duration-ms="4" started-at="2020-06-13T17:07:34 EDT" finished-at="2020-06-13T17:07:34 EDT">
+        <test-method status="PASS" signature="setClassAndTestCaseNames(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@51c668e3]" name="setClassAndTestCaseNames" is-config="true" duration-ms="6" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:45 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.expedia.tests.SignupTest.validateTitle()]]>
+                <![CDATA[public void tests.LoginTest.loginValidUser()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setClassAndTestCaseNames -->
-        <test-method status="PASS" signature="validateTitle()[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="validateTitle" duration-ms="22" started-at="2020-06-13T17:07:34 EDT" finished-at="2020-06-13T17:07:34 EDT">
+        <test-method status="PASS" signature="loginValidUser()[pri:0, instance:tests.LoginTest@51c668e3]" name="loginValidUser" duration-ms="1941" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:47 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateTitle -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="getTestResult" is-config="true" duration-ms="661" started-at="2020-06-13T17:07:34 EDT" finished-at="2020-06-13T17:07:34 EDT">
+        </test-method> <!-- loginValidUser -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@51c668e3]" name="getTestResult" is-config="true" duration-ms="396" started-at="2020-06-18T18:02:47 EDT" finished-at="2020-06-18T18:02:47 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateTitle status=SUCCESS method=SignupTest.validateTitle()[pri:0, instance:com.expedia.tests.SignupTest@d5b810e] output={null}]]]>
+                <![CDATA[[TestResult name=loginValidUser status=SUCCESS method=LoginTest.loginValidUser()[pri:0, instance:tests.LoginTest@51c668e3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="verifyLogo()[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="verifyLogo" duration-ms="3872" started-at="2020-06-13T17:07:34 EDT" finished-at="2020-06-13T17:07:38 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogo -->
-        <test-method status="PASS" signature="setClassAndTestCaseNames(java.lang.reflect.Method)[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="setClassAndTestCaseNames" is-config="true" duration-ms="0" started-at="2020-06-13T17:07:34 EDT" finished-at="2020-06-13T17:07:34 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.expedia.tests.SignupTest.verifyLogo() throws java.io.IOException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setClassAndTestCaseNames -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="getTestResult" is-config="true" duration-ms="27" started-at="2020-06-13T17:07:38 EDT" finished-at="2020-06-13T17:07:38 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLogo status=SUCCESS method=SignupTest.verifyLogo()[pri:0, instance:com.expedia.tests.SignupTest@d5b810e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="quitAllBrowsers()[pri:0, instance:com.expedia.tests.SignupTest@d5b810e]" name="quitAllBrowsers" is-config="true" duration-ms="793" started-at="2020-06-13T17:07:38 EDT" finished-at="2020-06-13T17:07:39 EDT">
+        <test-method status="PASS" signature="quitAllBrowsers()[pri:0, instance:tests.LoginTest@51c668e3]" name="quitAllBrowsers" is-config="true" duration-ms="833" started-at="2020-06-18T18:02:47 EDT" finished-at="2020-06-18T18:02:48 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAllBrowsers -->
-      </class> <!-- com.expedia.tests.SignupTest -->
+      </class> <!-- tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

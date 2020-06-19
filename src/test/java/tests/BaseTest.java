@@ -1,4 +1,4 @@
-package com.expedia.tests;
+package tests;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -31,20 +31,20 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Date;
-import java.util.Properties;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utility.Constant;
+import utility.Log;
 
 
 public class BaseTest {
 	
-	private WebDriver driver;
-	protected Properties prop = new Properties();
+	public WebDriver driver;
+	//protected Properties prop = new Properties();
 	protected String dateName = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss").format(new Date());
 
 	private Logger logger = LogManager.getLogger(BaseTest.class);
@@ -61,17 +61,8 @@ public class BaseTest {
 	protected ExtentTest test;
 	
 	public void configureBrowser() {
-		// Get data properties file which contains configuration details
-		try {
-			FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/data.properties");
-			prop.load(file);
-		} 
-		catch (Exception e) {
-			System.out.println("Failed to load data properties file - " + e.getMessage());
-		}
-		
 		// configure web drivers
-		if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
+		if (Constant.Browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			//options.setHeadless(false);
@@ -80,30 +71,30 @@ public class BaseTest {
 			// to hide "Chrome is being controlled by automated" info-bar message
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
-			driver = new ChromeDriver(options);
+			this.driver = new ChromeDriver(options);
 		} 
-		else if (prop.getProperty("browser").equalsIgnoreCase("firefox")) {
+		else if (Constant.Browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions ffOptions = new FirefoxOptions();
 			ffOptions.setHeadless(false);
 			ffOptions.setAcceptInsecureCerts(true);
-			driver = new FirefoxDriver(ffOptions);
+			this.driver = new FirefoxDriver(ffOptions);
 		} 
-		else if(prop.getProperty("browser").equalsIgnoreCase("ie")) {
+		else if(Constant.Browser.equalsIgnoreCase("ie")) {
 			WebDriverManager.iedriver().setup();
 			InternetExplorerOptions ieOptions = new InternetExplorerOptions();
 			ieOptions.ignoreZoomSettings();
 			ieOptions.introduceFlakinessByIgnoringSecurityDomains();
-			driver = new InternetExplorerDriver(ieOptions);
+			this.driver = new InternetExplorerDriver(ieOptions);
 		} 
-		else logger.error("Please enter a supported browser");
+		else logger.error("Please enter a supported browser in Constant.URL variable");
 		
 		driver.manage().window().maximize();
 		// ***will be using explicit waits instead
 		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("baseURL"));
-		logger.info("Navigating to " + prop.getProperty("baseURL"));
+		driver.get(Constant.URL);
+		logger.info("Navigating to " + Constant.URL);
 	}
 	
 	public void configureReport() {
@@ -111,24 +102,22 @@ public class BaseTest {
 		spark.config().setDocumentTitle("YelpCamp Automation");
 		spark.config().setReportName("Automation Execution Report");
 		spark.config().setTheme(com.aventstack.extentreports.reporter.configuration.Theme.DARK);
-		
 		extent = new ExtentReports();
 		extent.attachReporter(spark);
+		
 		// General information to specify in report
-		extent.setSystemInfo("Application Name", prop.getProperty("application"));
-		extent.setSystemInfo("Environment", prop.getProperty("environment"));
-		extent.setSystemInfo("OS", prop.getProperty("os"));
-		extent.setSystemInfo("User", prop.getProperty("username"));
-		extent.setSystemInfo("Browser", prop.getProperty("browser"));
+		extent.setSystemInfo("Application Name", Constant.Application);
+		extent.setSystemInfo("Environment", Constant.Environment);
+		extent.setSystemInfo("User", Constant.Username);
+		extent.setSystemInfo("Browser", Constant.Browser);
 		
 		logger.info("Extent report has been setup and configured.");
 	}
 	
 	// return driver to pass to page objects and tests
 	public WebDriver getDriver() {
-		return driver;
+		return this.driver;
 	}
-	
 	
 	// launch browser and go to specified URL
 	@BeforeSuite
@@ -136,6 +125,7 @@ public class BaseTest {
 	public void startupBrowser() {
 		configureBrowser();
 		configureReport();
+		
 	}
 	
 	@BeforeMethod
@@ -144,7 +134,7 @@ public class BaseTest {
 		// collecting the current running test case name
 		String className = this.getClass().getSimpleName();
 		test = extent.createTest(className + " - " + method.getName());
-		System.out.println("Extent create test begins...");
+		Log.startTestCase(method.getName());
 	}
 	
 	// send test case results to extent report
@@ -156,7 +146,7 @@ public class BaseTest {
 			test.fail(MarkupHelper.createLabel(result.getName() + " - " + result.getThrowable().getMessage(), ExtentColor.RED));
 			// take and store screenshot
 			String screenshotPath = getScreenshot(driver, result.getName());
-			System.out.println("Path of screenshot: " + screenshotPath);
+			//System.out.println("Path of screenshot: " + screenshotPath);
 			// add screenshot to report
 			test.fail("Test Failed Screenshot below ", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 		} 
@@ -172,7 +162,9 @@ public class BaseTest {
 		extent.flush();	// to write all test logs to report file
 		String actualReportPath = reportPath + "index.html";
 		new File(actualReportPath).renameTo(new File(System.getProperty("user.dir") + "/test-output/" + "extent-report" + dateName + ".html"));
-		logger.info("Sending test result for the executed test case.");
+		
+		Log.endTestCase(result.getName());
+		//logger.info("Sending test result for the executed test case.");
 	}
 	
 	@AfterSuite		
@@ -189,13 +181,13 @@ public class BaseTest {
 		File src = ts.getScreenshotAs(OutputType.FILE);
 	  
 		// store screenshot in local project directory
-		String path = System.getProperty("user.dir") + "/Screenshots/FailedScreenshots/" + screenshotName + dateName + ".png";
+		String path = System.getProperty("user.dir") + "/Screenshots/FailedScreenshots/" + screenshotName + this.dateName + ".png";
 		File destination = new File(path);
 		try {
 			FileUtils.copyFile(src, destination);
 		} 
 		catch(Exception e) {
-			System.out.println("Saving screenshot capture failed - " + e.getMessage());
+			System.out.println("Screenshot capture failed - " + e.getMessage());
 		}
 		
 		return path;

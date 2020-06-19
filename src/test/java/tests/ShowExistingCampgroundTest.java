@@ -1,4 +1,4 @@
-package com.expedia.tests;
+package tests;
 
 import org.testng.annotations.Test;
 
