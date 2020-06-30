@@ -2,46 +2,50 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2391" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:47 EDT">
+  <suite name="Default suite" duration-ms="38704" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:34:09 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2391" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:47 EDT">
-      <class name="tests.LoginTest">
-        <test-method status="PASS" signature="startupBrowser()[pri:0, instance:tests.LoginTest@51c668e3]" name="startupBrowser" is-config="true" duration-ms="8276" started-at="2020-06-18T18:02:37 EDT" finished-at="2020-06-18T18:02:45 EDT">
+    <test name="Default test" duration-ms="38704" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:34:09 EDT">
+      <class name="tests.AddNewCampgroundTest">
+        <test-method status="PASS" signature="startupBrowser()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="startupBrowser" is-config="true" duration-ms="10820" started-at="2020-06-30T16:33:19 EDT" finished-at="2020-06-30T16:33:30 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startupBrowser -->
-        <test-method status="PASS" signature="setClassAndTestCaseNames(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@51c668e3]" name="setClassAndTestCaseNames" is-config="true" duration-ms="6" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:45 EDT">
+        <test-method status="PASS" signature="initElements()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="initElements" is-config="true" duration-ms="65" started-at="2020-06-30T16:33:30 EDT" depends-on-methods="tests.BaseTest.startupBrowser" finished-at="2020-06-30T16:33:30 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initElements -->
+        <test-method status="PASS" signature="setClassAndTestCaseNames(java.lang.reflect.Method)[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="setClassAndTestCaseNames" is-config="true" duration-ms="8" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:33:30 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.LoginTest.loginValidUser()]]>
+                <![CDATA[public void tests.AddNewCampgroundTest.addNewCampground() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setClassAndTestCaseNames -->
-        <test-method status="PASS" signature="loginValidUser()[pri:0, instance:tests.LoginTest@51c668e3]" name="loginValidUser" duration-ms="1941" started-at="2020-06-18T18:02:45 EDT" finished-at="2020-06-18T18:02:47 EDT">
+        <test-method status="PASS" signature="addNewCampground()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="addNewCampground" duration-ms="38295" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:34:08 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginValidUser -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@51c668e3]" name="getTestResult" is-config="true" duration-ms="396" started-at="2020-06-18T18:02:47 EDT" finished-at="2020-06-18T18:02:47 EDT">
+        </test-method> <!-- addNewCampground -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="getTestResult" is-config="true" duration-ms="358" started-at="2020-06-30T16:34:08 EDT" finished-at="2020-06-30T16:34:09 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginValidUser status=SUCCESS method=LoginTest.loginValidUser()[pri:0, instance:tests.LoginTest@51c668e3] output={null}]]]>
+                <![CDATA[[TestResult name=addNewCampground status=SUCCESS method=AddNewCampgroundTest.addNewCampground()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="quitAllBrowsers()[pri:0, instance:tests.LoginTest@51c668e3]" name="quitAllBrowsers" is-config="true" duration-ms="833" started-at="2020-06-18T18:02:47 EDT" finished-at="2020-06-18T18:02:48 EDT">
+        <test-method status="PASS" signature="quitAllBrowsers()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="quitAllBrowsers" is-config="true" duration-ms="868" started-at="2020-06-30T16:34:09 EDT" finished-at="2020-06-30T16:34:10 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAllBrowsers -->
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.AddNewCampgroundTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,7 +7,7 @@ import utility.Constant;
 
 // all reusable methods will go in this class
 
-public class SigninAction {
+public class ReusableMethods {
 	
 	public static void Execute(WebDriver driver) {
 		LoginPage loginPage = new LoginPage(driver);

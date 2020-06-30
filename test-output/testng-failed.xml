@@ -5,11 +5,12 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="loginValidUser"/>
           <include name="getTestResult"/>
           <include name="setClassAndTestCaseNames"/>
           <include name="quitAllBrowsers"/>
           <include name="startupBrowser"/>
+          <include name="initElements"/>
+          <include name="verify_login_of_authorized_user"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>

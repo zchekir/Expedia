@@ -1,8 +1,7 @@
 package tests;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -30,6 +29,8 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -46,7 +47,6 @@ public class BaseTest {
 	public WebDriver driver;
 	//protected Properties prop = new Properties();
 	protected String dateName = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss").format(new Date());
-
 	private Logger logger = LogManager.getLogger(BaseTest.class);
 	
 	// for excel sheet usage
@@ -123,9 +123,9 @@ public class BaseTest {
 	@BeforeSuite
 	// will run before the execution of all the test methods in the suite
 	public void startupBrowser() {
-		configureBrowser();
 		configureReport();
-		
+		configureBrowser();
+		logger.info("browser started...");
 	}
 	
 	@BeforeMethod
@@ -135,6 +135,7 @@ public class BaseTest {
 		String className = this.getClass().getSimpleName();
 		test = extent.createTest(className + " - " + method.getName());
 		Log.startTestCase(method.getName());
+		System.out.println("Running setClassAndTestCaseNames() method");
 	}
 	
 	// send test case results to extent report
@@ -164,19 +165,18 @@ public class BaseTest {
 		new File(actualReportPath).renameTo(new File(System.getProperty("user.dir") + "/test-output/" + "extent-report" + dateName + ".html"));
 		
 		Log.endTestCase(result.getName());
-		//logger.info("Sending test result for the executed test case.");
+		System.out.println("Running getTestResult() method");
 	}
 	
 	@AfterSuite		
 	// will run after the execution of ALL the test methods in suite. Closes all open browsers.
 	public void quitAllBrowsers() {
 		driver.quit();
-		logger.info("Closed all browsers.");
+		logger.info("Closing all browsers");
 	}
 	
 	// take and store screenshots locally
 	public String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
-		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 	  
@@ -191,6 +191,12 @@ public class BaseTest {
 		}
 		
 		return path;
+	}
+	
+	// for generating random strings
+	public static String randomString() {
+		String rString = RandomStringUtils.randomAlphabetic(6);
+		return rString;
 	}
 	
 	

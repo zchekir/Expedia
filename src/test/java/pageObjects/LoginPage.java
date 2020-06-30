@@ -1,12 +1,16 @@
 package pageObjects;
 
-import org.mortbay.log.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
+
 public class LoginPage extends BasePage {
+	
+	private Logger logger = LogManager.getLogger(LoginPage.class);
 
 	// constructor
 	public LoginPage(WebDriver driver) {
@@ -46,12 +50,12 @@ public class LoginPage extends BasePage {
 		waitForElementToAppear(usernameField);
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(password);
-		Log.info("Username and password entered into text fields");
+		logger.info("Username and password entered into text fields");
 		loginBtn.click();
-		Log.info("User has logged in");
+		logger.info("User has logged in");
 		waitForElementToAppear(logoutBtn);
 		logoutBtn.click();
-		Log.info("User has logged out");
+		logger.info("User has logged out");
 	}
 	public void loginInvalidUser(String username, String password) {
 		waitForElementToAppear(viewAllCampgroundsLink);
@@ -61,9 +65,9 @@ public class LoginPage extends BasePage {
 		waitForElementToAppear(usernameField);
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(password);
-		Log.info("Username and password entered into text fields");
+		logger.info("Username and password entered into text fields");
 		loginBtn.click();
-		Log.info("Invalid user could not log in");
+		logger.info("Invalid user could not log in");
 	}
 	
 	// For Cucumber...

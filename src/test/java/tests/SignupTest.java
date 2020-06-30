@@ -14,20 +14,20 @@ import org.testng.annotations.Test;
 
 public class SignupTest extends BaseTest {
 	// creating log object for logging messages to console/main.log file
-	Logger logger = LogManager.getLogger(SignupTest.class);
+	private Logger logger = LogManager.getLogger(SignupTest.class);
 	
 	
 	@Test 
-	public void validateTitle() {
+	public void validate_tab_title() {
 		Assert.assertEquals(getDriver().getTitle(), "YelpCamp");
 		logger.info("Validated document tab title");
 	}
 	
 	// ***Debug why this second test case does not appear in extent report***
-	@Test
-	public void verifyLogo() throws IOException, InterruptedException {
-		getDriver().findElement(By.linkText("View All Campgrounds")).click();
-		Thread.sleep(3000);
+	//@Test
+	public void verify_homepage_logo() throws IOException, InterruptedException {
+		super.getDriver().findElement(By.linkText("View All Campgrounds")).click();
+		Thread.sleep(2000);
 		WebElement brandLogo = getDriver().findElement(By.id("navbar-brand-img"));
 		// get screenshot of element and store as a file
 		File file = brandLogo.getScreenshotAs(OutputType.FILE);
@@ -38,8 +38,9 @@ public class SignupTest extends BaseTest {
 			FileUtils.copyFile(file, destFile);
 		}
 		catch(Exception e) {
-			System.out.println("Saving screeshot capture of logo failed - " + e.getMessage());
+			logger.error("Screeshot capture failed - " + e.getMessage());
 		}
+		
 		logger.info("Verified YelpCamp logo");
 	}
 	
