@@ -16,4 +16,6 @@ public class Constant {
 	
 	public static final String Environment = "Staging";
 
+	public static final String reportConfigPath = "C:\\Users\\zkapadia\\eclipse-workspace\\Expedia\\src\\main\\resources\\htmlreporter-config.xml";
+
 }

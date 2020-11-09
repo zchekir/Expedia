@@ -1,15 +1,23 @@
-2020-06-30 14:02:21,541 INFO t.SignupTest [main] Validated document tab title
-2020-06-30 14:02:21,545 WARN t.SignupTest [main] Testing logger warn message
-2020-06-30 14:26:43,051 INFO t.LoginTest [main] Entered in login credentials successfully!
-2020-06-30 16:27:05,810 INFO t.BaseTest [main] Extent report has been setup and configured.
-2020-06-30 16:27:26,577 INFO t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
-2020-06-30 16:27:26,577 INFO t.BaseTest [main] browser started...
-2020-06-30 16:27:29,555 INFO t.AddNewCampgroundTest [main] User is logged in
-2020-06-30 16:28:22,111 INFO t.AddNewCampgroundTest [main] Added new campground
-2020-06-30 16:28:23,335 INFO t.BaseTest [main] Closing all browsers
-2020-06-30 16:33:19,775 INFO t.BaseTest [main] Extent report has been setup and configured.
-2020-06-30 16:33:30,458 INFO t.BaseTest [main] Navigating to https://zk-yelpcamp.herokuapp.com
-2020-06-30 16:33:30,458 INFO t.BaseTest [main] browser started...
-2020-06-30 16:33:33,162 INFO t.AddNewCampgroundTest [main] User is logged in
-2020-06-30 16:34:08,865 INFO t.AddNewCampgroundTest [main] Added new campground
-2020-06-30 16:34:10,115 INFO t.BaseTest [main] Closing all browsers
+2020-11-09 13:13:09,083 INFO async_logger [main] Extent report has been setup and configured.
+2020-11-09 13:13:24,714 INFO async_logger [main] Navigating to https://zk-yelpcamp.herokuapp.com
+2020-11-09 13:13:24,714 INFO async_logger [main] browser starting up...
+2020-11-09 13:13:24,808 INFO async_logger [main] Logger name => async_logger, Level set => INFO
+2020-11-09 13:13:24,808 INFO async_logger [main] ****************************************************************************************
+2020-11-09 13:13:24,808 INFO async_logger [main] ****************************************************************************************
+2020-11-09 13:13:24,808 INFO async_logger [main] $$$$$$$$$$$$$$$$$$$$$                 verify_add_new_campground       $$$$$$$$$$$$$$$$$$$$$$$$$
+2020-11-09 13:13:24,808 INFO async_logger [main] ****************************************************************************************
+2020-11-09 13:13:24,808 INFO async_logger [main] ****************************************************************************************
+2020-11-09 13:13:25,971 INFO async_logger [main] Username and password entered into text fields
+2020-11-09 13:13:26,641 INFO async_logger [main] User has logged in
+2020-11-09 13:13:26,947 INFO async_logger [main] User has logged out
+2020-11-09 13:13:35,453 ERROR async_logger [main] Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.name: campground[name]' (tried for 4 second(s) with 500 milliseconds interval)
+2020-11-09 13:13:43,628 ERROR async_logger [main] Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.name: campground[price]' (tried for 4 second(s) with 500 milliseconds interval)
+2020-11-09 13:13:52,022 ERROR async_logger [main] Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.name: campground[description]' (tried for 4 second(s) with 500 milliseconds interval)
+2020-11-09 13:14:00,217 ERROR async_logger [main] Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.id: location' (tried for 4 second(s) with 500 milliseconds interval)
+2020-11-09 13:14:08,415 ERROR async_logger [main] Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.className: btn btn-primary' (tried for 4 second(s) with 500 milliseconds interval)
+2020-11-09 13:14:08,770 INFO async_logger [main] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
+2020-11-09 13:14:08,770 INFO async_logger [main] X
+2020-11-09 13:14:08,770 INFO async_logger [main] X
+2020-11-09 13:14:08,770 INFO async_logger [main] X
+2020-11-09 13:14:08,770 INFO async_logger [main] X
+2020-11-09 13:14:09,515 INFO async_logger [main] Closing all browsers

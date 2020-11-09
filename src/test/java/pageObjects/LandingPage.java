@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
+import utility.Log;
+
 public class LandingPage extends BasePage {
 
 	public LandingPage(WebDriver driver) {
@@ -24,7 +26,7 @@ public class LandingPage extends BasePage {
 		waitForElementToAppear(searchBtn);
 		searchField.sendKeys(campground);
 		searchField.getAttribute("value");
-		System.out.println("Searched for test value: " + campground);
+		Log.info("Searched for test value: " + campground);
 		searchBtn.click();
 		waitForTextToDisappear(searchField, campground);
 	}

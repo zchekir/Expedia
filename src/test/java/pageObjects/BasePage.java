@@ -11,12 +11,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 
 	private static final int TIMEOUT = 4;
-    private static final int POLLING = 500;
+    private static final int POLLING = 1000;
 	
 	protected WebDriver driver;
 	private WebDriverWait wait;
 	
-	// creating objects for webpage
+	// creating objects for web page
 	public static LandingPage landingPage;
 	public static HomePage homePage;
 	public static LoginPage loginPage;

@@ -5,28 +5,24 @@ import org.apache.logging.log4j.Logger;
 
 public class Log {
 	// initialize log4j logs
-	public static Logger logger = LogManager.getLogger(Log.class);
+	public static Logger logger = LogManager.getLogger("async_logger");
 	
-	// This is to print log for the beginning of the test case, as we usually run so many test cases as a test suite
+	// Print log in the beginning of each test case
 	public static void startTestCase(String sTestCaseName) {
+		 logger.info("Logger name => " + logger.getName() + ", Level set => " + logger.getLevel());
 		 logger.info("****************************************************************************************");
 		 logger.info("****************************************************************************************");
-		 logger.info("$$$$$$$$$$$$$$$$$$$$$                 " + sTestCaseName + "       $$$$$$$$$$$$$$$$$$$$$$$$$");
+		 logger.info("$$$$$$$$$                 " + "TC Name: " + sTestCaseName + "       $$$$$$$$$");
 		 logger.info("****************************************************************************************");
 		 logger.info("****************************************************************************************");
 	}
 	 
-	//This is to print log for the ending of the test case
-	 
+	// Print log in the ending of each test case
 	public static void endTestCase(String sTestCaseName) {
-		 logger.info("XXXXXXXXXXXXXXXXXXXXXXX             " + "-E---N---D-" + "             XXXXXXXXXXXXXXXXXXXXXX");
-		 logger.info("X");
-		 logger.info("X");
-		 logger.info("X");
-		 logger.info("X");
+		 logger.info("XXXXXXXXXXXXXXXX             " + "E-N-D of Test-Case: " + sTestCaseName + "             XXXXXXXXXXXXXXXX");
 	}
 	 
-	// Need to create these methods, so that they can be called  
+	// differ types of global log methods available  
 	public static void info(String message) {
 		 logger.info(message);
 	}

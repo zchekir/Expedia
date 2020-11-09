@@ -1,12 +1,12 @@
 package pageObjects;
 
 public class HomePageWebElement {
-	public static final String addNewCampgroundLink= "Add New Campground";
-	public static final String campgroundName= "campground[name]";
-	public static final String image= "image";
-	public static final String campgroundPrice= "campground[price]";
-	public static final String campgroundDescription= "campground[description]";
-	public static final String location= "location";
-	public static final String clickSubmit= "btn btn-primary";
+	protected static final String addNewCampgroundLink= "Add New Campground";
+	protected static final String campgroundName= "campground[name]";
+	protected static final String image= "image";
+	protected static final String campgroundPrice= "campground[price]";
+	protected static final String campgroundDescription= "campground[description]";
+	protected static final String location= "location";
+	protected static final String clickSubmit= "btn btn-primary";
 
 }

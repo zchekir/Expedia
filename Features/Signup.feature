@@ -4,14 +4,11 @@ Feature: Signup
 #T1
 @SmokeTest
 Scenario: Can create a non-admin account
-	Given User launches chrome browser
-	And navigates to home page "https://zk-yelpcamp.herokuapp.com/campgrounds"
-	When user clicks on Sign Up link
-	And fills in for all required fields and clicks on Sign Up button
-	Then new account has been created 
-	And user has automatically logged in with that new account
-	Then user can view confirmation message containing their username
-	And close browser
+	Given I am on the homepage "https://zk-yelpcamp.herokuapp.com/campgrounds"
+	When I click on the Sign Up link
+	And I fill in my personal information 
+	And I click on the Sign Up button
+	Then A new account is created and I am automatically logged in
 
 #T2	
 @RegressionTest

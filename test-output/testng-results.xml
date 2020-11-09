@@ -2,46 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38704" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:34:09 EDT">
+  <suite name="Default suite" duration-ms="44016" started-at="2020-11-09T13:13:24 EST" finished-at="2020-11-09T13:14:08 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38704" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:34:09 EDT">
+    <test name="Default test" duration-ms="44016" started-at="2020-11-09T13:13:24 EST" finished-at="2020-11-09T13:14:08 EST">
       <class name="tests.AddNewCampgroundTest">
-        <test-method status="PASS" signature="startupBrowser()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="startupBrowser" is-config="true" duration-ms="10820" started-at="2020-06-30T16:33:19 EDT" finished-at="2020-06-30T16:33:30 EDT">
+        <test-method status="PASS" signature="startupBrowser()[pri:0, instance:tests.AddNewCampgroundTest@1d7acb34]" name="startupBrowser" is-config="true" duration-ms="16310" started-at="2020-11-09T13:13:08 EST" finished-at="2020-11-09T13:13:24 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startupBrowser -->
-        <test-method status="PASS" signature="initElements()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="initElements" is-config="true" duration-ms="65" started-at="2020-06-30T16:33:30 EDT" depends-on-methods="tests.BaseTest.startupBrowser" finished-at="2020-06-30T16:33:30 EDT">
+        <test-method status="PASS" signature="initElements()[pri:0, instance:tests.AddNewCampgroundTest@1d7acb34]" name="initElements" is-config="true" duration-ms="42" started-at="2020-11-09T13:13:24 EST" depends-on-methods="tests.BaseTest.startupBrowser" finished-at="2020-11-09T13:13:24 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initElements -->
-        <test-method status="PASS" signature="setClassAndTestCaseNames(java.lang.reflect.Method)[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="setClassAndTestCaseNames" is-config="true" duration-ms="8" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:33:30 EDT">
+        <test-method status="PASS" signature="setClassAndTestCaseNames(java.lang.reflect.Method)[pri:0, instance:tests.AddNewCampgroundTest@1d7acb34]" name="setClassAndTestCaseNames" is-config="true" duration-ms="13" started-at="2020-11-09T13:13:24 EST" finished-at="2020-11-09T13:13:24 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.AddNewCampgroundTest.addNewCampground() throws java.lang.InterruptedException]]>
+                <![CDATA[public void tests.AddNewCampgroundTest.verify_add_new_campground() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setClassAndTestCaseNames -->
-        <test-method status="PASS" signature="addNewCampground()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="addNewCampground" duration-ms="38295" started-at="2020-06-30T16:33:30 EDT" finished-at="2020-06-30T16:34:08 EDT">
+        <test-method status="PASS" signature="verify_add_new_campground()[pri:0, instance:tests.AddNewCampgroundTest@1d7acb34]" name="verify_add_new_campground" duration-ms="43605" started-at="2020-11-09T13:13:24 EST" finished-at="2020-11-09T13:14:08 EST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewCampground -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="getTestResult" is-config="true" duration-ms="358" started-at="2020-06-30T16:34:08 EDT" finished-at="2020-06-30T16:34:09 EDT">
+        </test-method> <!-- verify_add_new_campground -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:tests.AddNewCampgroundTest@1d7acb34]" name="getTestResult" is-config="true" duration-ms="352" started-at="2020-11-09T13:14:08 EST" finished-at="2020-11-09T13:14:08 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addNewCampground status=SUCCESS method=AddNewCampgroundTest.addNewCampground()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3] output={null}]]]>
+                <![CDATA[[TestResult name=verify_add_new_campground status=SUCCESS method=AddNewCampgroundTest.verify_add_new_campground()[pri:0, instance:tests.AddNewCampgroundTest@1d7acb34] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="quitAllBrowsers()[pri:0, instance:tests.AddNewCampgroundTest@4c1909a3]" name="quitAllBrowsers" is-config="true" duration-ms="868" started-at="2020-06-30T16:34:09 EDT" finished-at="2020-06-30T16:34:10 EDT">
+        <test-method status="PASS" signature="quitAllBrowsers()[pri:0, instance:tests.AddNewCampgroundTest@1d7acb34]" name="quitAllBrowsers" is-config="true" duration-ms="727" started-at="2020-11-09T13:14:08 EST" finished-at="2020-11-09T13:14:09 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAllBrowsers -->

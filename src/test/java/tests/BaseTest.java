@@ -2,10 +2,6 @@ package tests;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -29,8 +25,6 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -47,13 +41,6 @@ public class BaseTest {
 	public WebDriver driver;
 	//protected Properties prop = new Properties();
 	protected String dateName = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss").format(new Date());
-	private Logger logger = LogManager.getLogger(BaseTest.class);
-	
-	// for excel sheet usage
-	protected XSSFSheet sheet;
-	protected XSSFWorkbook workbook;
-	protected XSSFCell cell;
-	protected XSSFRow row;
 	
 	// for extent report usage
 	protected String reportPath = System.getProperty("user.dir") + "/test-output/";
@@ -87,14 +74,15 @@ public class BaseTest {
 			ieOptions.introduceFlakinessByIgnoringSecurityDomains();
 			this.driver = new InternetExplorerDriver(ieOptions);
 		} 
-		else logger.error("Please enter a supported browser in Constant.URL variable");
+		else Log.error("Please enter a supported browser in the Constant.URL variable");
 		
 		driver.manage().window().maximize();
-		// ***will be using explicit waits instead
+		
+		// ***Using explicit waits instead***
 		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		driver.get(Constant.URL);
-		logger.info("Navigating to " + Constant.URL);
+		Log.info("Browser is set to " + Constant.Browser);
 	}
 	
 	public void configureReport() {
@@ -111,7 +99,7 @@ public class BaseTest {
 		extent.setSystemInfo("User", Constant.Username);
 		extent.setSystemInfo("Browser", Constant.Browser);
 		
-		logger.info("Extent report has been setup and configured.");
+		Log.info("Extent Report successfully configured.");
 	}
 	
 	// return driver to pass to page objects and tests
@@ -119,45 +107,45 @@ public class BaseTest {
 		return this.driver;
 	}
 	
-	// launch browser and go to specified URL
+	
 	@BeforeSuite
-	// will run before the execution of all the test methods in the suite
+	// Runs before the execution of all the test methods in the suite.
 	public void startupBrowser() {
 		configureReport();
 		configureBrowser();
-		logger.info("browser started...");
+		Log.info("Launching browser, and navigating to " + Constant.URL);
 	}
 	
 	@BeforeMethod
-	// will be executed before each test method will run
+	// Runs before each test method.
 	public void setClassAndTestCaseNames(Method method) {
 		// collecting the current running test case name
 		String className = this.getClass().getSimpleName();
 		test = extent.createTest(className + " - " + method.getName());
 		Log.startTestCase(method.getName());
-		System.out.println("Running setClassAndTestCaseNames() method");
 	}
 	
-	// send test case results to extent report
 	@AfterMethod
-	// will run after the execution of each test method. To send pass/fail test result to Extent report.
+	// Runs after execution of each test method. 
+	// Send pass/fail test result to Extent report
 	public void getTestResult(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			// add testcase name and exception to report
+			// add test case name and exception to report
 			test.fail(MarkupHelper.createLabel(result.getName() + " - " + result.getThrowable().getMessage(), ExtentColor.RED));
 			// take and store screenshot
 			String screenshotPath = getScreenshot(driver, result.getName());
 			//System.out.println("Path of screenshot: " + screenshotPath);
 			// add screenshot to report
 			test.fail("Test Failed Screenshot below ", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+			Log.fatal("Test result Failed");
 		} 
 		else if (result.getStatus() == ITestResult.SKIP) {
 			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case SKIPPED", ExtentColor.ORANGE)); 
-			System.out.println("Test result was Skipped");
+			Log.warn("Test result Skipped");
 		} 
 		else if (result.getStatus() == ITestResult.SUCCESS) {
 			test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
-			System.out.println("Test result was Success");
+			Log.info("Test result Success");
 		}
 		
 		extent.flush();	// to write all test logs to report file
@@ -169,10 +157,10 @@ public class BaseTest {
 	}
 	
 	@AfterSuite		
-	// will run after the execution of ALL the test methods in suite. Closes all open browsers.
+	// Runs after execution of ALL the test methods in suite.
 	public void quitAllBrowsers() {
 		driver.quit();
-		logger.info("Closing all browsers");
+		Log.info("Closing all browsers");
 	}
 	
 	// take and store screenshots locally
@@ -193,10 +181,17 @@ public class BaseTest {
 		return path;
 	}
 	
-	// for generating random strings
+	// to generate random strings
 	public static String randomString() {
 		String rString = RandomStringUtils.randomAlphabetic(6);
 		return rString;
+	}
+	
+	// to get cucumber configuration report
+	public static String getReportConfigPath() {
+		String reportConfigPath = Constant.reportConfigPath;
+		if (reportConfigPath != null) return reportConfigPath;
+		else throw new RuntimeException("Report Config Path not specified in utility.Constant file");
 	}
 	
 	

@@ -97,27 +97,24 @@
 	<dependency>
 	  <groupId>commons-io</groupId>
 	  <artifactId>commons-io</artifactId>
-	  <version>2.6</version>
+	  <version>2.8.0</version>
 	</dependency>
 	
 	<!-- rest-assured library -->
 	<dependency>
 	    <groupId>io.rest-assured</groupId>
 	    <artifactId>rest-assured</artifactId>
-	    <version>4.3.0</version>
-	    <scope>test</scope>
+	    <version>4.3.1</version>
 	</dependency>
 	<dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>json-path</artifactId>
-      <version>4.3.0</version>
-      <scope>test</scope>
+      <version>4.3.1</version>
 	</dependency>
 	<dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>json-schema-validator</artifactId>
-      <version>4.3.0</version>
-      <scope>test</scope>
+      <version>4.3.1</version>
 	</dependency>
 
     <!-- to use testng -->
@@ -125,14 +122,14 @@
 	  <groupId>org.testng</groupId>
 	  <artifactId>testng</artifactId>
 	  <scope>test</scope>
-	  <version>7.1.0</version>
+	  <version>7.3.0</version>
    </dependency>
    
 	<!-- to manage webdrivers -->
      <dependency>
 	   <groupId>io.github.bonigarcia</groupId>
 	   <artifactId>webdrivermanager</artifactId>
-	   <version>3.8.1</version>
+	   <version>4.2.2</version>
      </dependency>        
 	
 	<!-- to use log4j -->
@@ -149,9 +146,8 @@
 	<dependency>
 	    <groupId>org.slf4j</groupId>
 	    <artifactId>slf4j-simple</artifactId>
-	    <version>1.7.30</version>	<!-- Use this 1.7.x version as it prevents error -->
+	    <version>2.0.0-alpha1</version>	<!-- Use this 1.7.x version as it prevents error -->
 	</dependency>
-
 	<dependency>
 	  <groupId>com.lmax</groupId>
 	  <artifactId>disruptor</artifactId>
@@ -161,13 +157,6 @@
 	  <groupId>com.sun.mail</groupId>
 	  <artifactId>javax.mail</artifactId>
 	  <version>1.6.2</version>
-	</dependency>
-	
-	<!-- to add extent report -->
-	<dependency>
-	  <groupId>com.aventstack</groupId>
-	  <artifactId>extentreports</artifactId>
-	  <version>4.1.6</version>
 	</dependency>
 	
 	<!-- to access excel workbooks -->
@@ -182,45 +171,60 @@
 	  <version>4.1.2</version>
 	</dependency>
 	
+	<!-- to add extent report 
+		HAD TO DOWNGRADE TO 4.X.X VERSION AND ADD CUCUMBER4 ADAPTER TO GET CUCUMBER REPORTS TO WORK!!!
+	-->
+	<dependency>
+	  <groupId>com.aventstack</groupId>
+	  <artifactId>extentreports</artifactId>
+	  <version>4.1.7</version>
+	</dependency>
+	
 	<!-- Cucumber dependencies -->
 	<dependency>
     	<groupId>io.cucumber</groupId>
         <artifactId>cucumber-core</artifactId>
-        <version>6.1.2</version>
+        <version>4.2.0</version>
     </dependency>
 	<dependency>
 	    <groupId>io.cucumber</groupId>
 	    <artifactId>cucumber-java</artifactId>
-	    <version>6.1.2</version>
+	    <version>4.2.0</version>
 	</dependency>
 	<dependency>
 	    <groupId>io.cucumber</groupId>
 	    <artifactId>cucumber-junit</artifactId>
-	    <version>6.1.2</version>
-	    <scope>test</scope>
+	    <version>4.2.0</version>
 	</dependency>
+	<!--  
 	<dependency>
         <groupId>io.cucumber</groupId>
         <artifactId>cucumber-html</artifactId>
         <version>0.2.7</version>
     </dependency>
-	<dependency>
-	    <groupId>com.vimalselvam</groupId>
-	    <artifactId>cucumber-extentsreport</artifactId>
-	    <version>3.1.1</version>
-	</dependency>
+	-->
 	<dependency>
 	    <groupId>org.hamcrest</groupId>
 	    <artifactId>hamcrest</artifactId>
 	    <version>2.2</version>
-	    <scope>test</scope>
 	</dependency>
+	<!--  
 	<dependency>
         <groupId>io.cucumber</groupId>
         <artifactId>gherkin</artifactId>
-        <version>14.0.1</version>
+        <version>15.0.2</version>
     </dependency>
-	
+    -->
+    <dependency>
+	    <groupId>com.aventstack</groupId>
+	    <artifactId>extentreports-cucumber4-adapter</artifactId>
+	    <version>1.0.7</version>
+	</dependency>
+	<dependency>
+        <groupId>com.vimalselvam</groupId>
+        <artifactId>cucumber-extentsreport</artifactId>
+        <version>3.0.0</version>
+     </dependency>
 
   </dependencies>
   

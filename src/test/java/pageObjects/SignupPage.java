@@ -29,9 +29,12 @@ public class SignupPage extends BasePage {
 		driver.findElement(firstNameField).sendKeys(firstName);
 		driver.findElement(lastNameField).sendKeys(lastName);
 		driver.findElement(emailField).sendKeys(email);
-		Log.info("Entered in all required fields");
+		Log.info("Entered following data: " + username + ", " + pw + ", " + firstName + ", " + lastName + ", " + email);
+	}
+	
+	public void clickSignupBtn() {
 		driver.findElement(signupBtn).click();
-		Log.info("Clicked Sign Up button");
+		Log.info("New account created");
 	}
 	
 
